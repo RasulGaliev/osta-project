@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from "./components/header/header.component";
 import { MainComponent } from './components/main/main.component';
 import {FooterComponent} from "./components/footer/footer.component";
+import { AboutComponent } from './components/about/about.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { HistoryComponent } from './components/history/history.component';
+import { ProjectTypesComponent } from './components/project-types/project-types.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    GalleryComponent,
+    HistoryComponent,
+    ProjectTypesComponent
   ],
   imports: [
     BrowserModule,
