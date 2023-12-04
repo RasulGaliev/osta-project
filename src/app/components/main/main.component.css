@@ -1,0 +1,177 @@
+.main-block {
+  background: url("../../../assets/images/main-page/main-block/background/main-background.png") #000;
+  /*height: 100vh;*/
+  height: 1113px;
+  background-size: cover;
+  position: relative;
+}
+
+.main-block .main-block-text-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.main-block-text .title {
+  text-align: center;
+}
+
+.main-block-text .text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 24px;
+  color: white;
+}
+
+.main-block-img img {
+  width: 560px;
+  height: 625px;
+  object-fit: cover;
+}
+
+.about-block {
+  padding: 100px;
+  background-color: rgba(0, 156, 102, 0.05);
+}
+
+.about-block .about-block-text-img {
+  display: flex;
+}
+
+.about-block .about-block-text {
+  width: 580px;
+}
+
+.about-block .about-block-text .text {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.about-block .about-block-img {
+  width: 580px;
+  margin-left: 20px;
+}
+
+.about-block .about-grid {
+  display: flex;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.about-block .grid-item {
+  flex: 1;
+  text-align: center;
+}
+
+.about-block .grid-item .title h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.about-block .grid-item .text {
+  font-size: 15px;
+}
+
+.events-block {
+  background: url("../../../assets/images/main-page/events-block/background/events-background.png") #000;
+  height: 634px;
+  background-size: cover;
+  position: relative;
+}
+
+.achievements-block {
+  background-color: #F5F3EF;
+  height: 519px;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.achievements-block .achievements {
+  margin: 50px 0;
+}
+
+.review-block {
+  background: url("../../../assets/images/main-page/review-block/background/review-background.png") #000;
+  height: 480px;
+  background-size: cover;
+  position: relative;
+}
+
+.contact-block {
+  height: 834px;
+  padding: 100px 0;
+}
+
+.contact-block .contacts {
+  display: flex;
+}
+
+.contact-block .send-email {
+  width: 320px;
+  padding: 50px 80px;
+  border: solid 3px #009C66;
+  border-radius: 5px;
+}
+
+.contact-block .send-email .title {
+  font-size: 30px;
+}
+
+.contact-block .send-email .text {
+  font-size: 15px;
+}
+
+.contact-block .send-email p {
+  margin: 0;
+}
+
+.contact-block .send-email .title,
+.contact-block .send-email .text {
+  margin-bottom: 15px;
+}
+
+.contact-block .send-email .title,
+.contact-block .send-email .text {
+  color: #2E363E
+}
+.contact-block .contact-information {
+  margin-left: 20px;
+  padding: 25px 35px;
+  width: 530px;
+}
+
+.contact-block .contact-information .phones,
+.contact-block .contact-information .phone a,
+.contact-block .contact-information .email a,
+.contact-block .contact-information .address a,
+.contact-block .social-networks {
+  display: flex;
+  margin-right: 12px;
+  align-items: center;
+}
+
+.contact-block .contact-information .phone img,
+.contact-block .contact-information .email img,
+.contact-block .contact-information .address img {
+  display: flex;
+  margin-right: 12px;
+}
+
+.contact-block .phone {
+  margin-right: 30px;
+}
+
+.contact-block .social-networks .telegram {
+  margin-left: 50px;
+}
+
+.contact-block .contact-information p {
+  margin: 0;
+}
+
+.contact-block .contact-information .phone,
+.contact-block .contact-information .email,
+.contact-block .contact-information .address {
+  margin-bottom: 25px;
+}

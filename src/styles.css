@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/montserrat-400.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/montserrat-600.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/montserrat-700.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('assets/fonts/montserrat-900.woff2') format('woff2');
+}
+
+:root {
+  color-scheme: only light
+}
+
+::-moz-selection { /* для Mozilla*/
+  background-color: #000;
+  color: #fff
+}
+
+::selection {
+  background-color: #000;
+  color: #fff
+}
+
+:focus {
+  outline: 0
+}
+
+body {
+  overflow-x: hidden; /* Содержимое переполнения при необходимости обрезается */
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  line-height: 1.25
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
