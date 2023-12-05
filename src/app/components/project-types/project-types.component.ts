@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './project-types.component.css'
 })
 export class ProjectTypesComponent {
-
+  buildIconUrl: string = './assets/images/project-types-page/project-types-block/icon/build.svg';
 }

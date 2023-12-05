@@ -1,0 +1,35 @@
+.project-types-block {
+  background: url('../../../assets/images/project-types-page/project-types-block/background/project-types-background.svg');
+  height: 990px;
+  /*padding: 100px 0;*/
+}
+
+.project-types-block .title {
+  padding-top: 230px;
+}
+
+.project-types-block .text {
+  font-size: 20px;
+}
+
+.project-types-block h2,
+.project-types-block p {
+  color: white;
+}
+
+.project-types-block .types-grid {
+  width: 500px;
+  margin-top: 100px;
+  display: grid;
+  gap: 40px 80px;
+  grid-template-columns: repeat(2, 1fr);  /* две колонки. 1fr гарантирует, что каждая колонка займет равную часть.*/
+}
+
+/*.project-types-block .types-item {*/
+/*  display: flex;*/
+/*}*/
+
+.project-types-block .type {
+  text-align: center;
+  /*margin-top: 50px;*/
+}
