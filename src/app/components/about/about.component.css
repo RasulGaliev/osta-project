@@ -1,0 +1,85 @@
+.about-block {
+  padding-top: 230px;
+  background: url("../../../assets/images/about-page/about-block/background/about-background.png") #000;
+  height: 1280px;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.about-block .about-block-text {
+  width: 580px;
+}
+
+.about-block .about-block-text .text {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.about-block .about-block-img {
+  width: 580px;
+  margin-left: 20px;
+}
+
+.about-block .about-grid {
+  display: flex;
+  padding: 10px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  width: 775px;
+  justify-content: center;
+  gap: 0 100px;
+}
+
+.about-block .grid-item {
+  /*display: flex;*/
+  text-align: center;
+
+}
+
+.grid-item:nth-child(3) {
+  flex-basis: 100%;
+}
+
+.about-block .grid-item .title h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.about-block .grid-item .text {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
+
+.information-block {
+  height: 846px;
+  background-color: #F2FAF7;
+  align-items: center;
+  display: flex;
+}
+
+.information-block .logo {
+  width: 100%;
+  text-align: center;
+}
+
+.information-block .text {
+  font-size: 20px;
+}
+
+
+
+.team-block {
+  background: url("../../../assets/images/about-page/team-block/background/team-background.png") #000;
+  height: 1280px;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.team-block h2 {
+  color: white;
+}

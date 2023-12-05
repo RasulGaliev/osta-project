@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HistoryComponent } from './components/history/history.component';
 import { ProjectTypesComponent } from './components/project-types/project-types.component';
+import { AchievementsComponent } from './components/achievements/achievements.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProjectTypesComponent } from './components/project-types/project-types.
     AboutComponent,
     GalleryComponent,
     HistoryComponent,
-    ProjectTypesComponent
+    ProjectTypesComponent,
+    AchievementsComponent
   ],
   imports: [
     BrowserModule,

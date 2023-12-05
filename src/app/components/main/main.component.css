@@ -1,7 +1,6 @@
 .main-block {
   background: url("../../../assets/images/main-page/main-block/background/main-background.png") #000;
-  /*height: 100vh;*/
-  height: 1113px;
+  height: 1280px;
   background-size: cover;
   position: relative;
 }
@@ -71,7 +70,10 @@
 
 .about-block .grid-item .text {
   font-size: 15px;
+  font-weight: 300;
 }
+
+
 
 .events-block {
   background: url("../../../assets/images/main-page/events-block/background/events-background.png") #000;
@@ -80,16 +82,7 @@
   position: relative;
 }
 
-.achievements-block {
-  background-color: #F5F3EF;
-  height: 519px;
-  padding: 100px 0;
-  text-align: center;
-}
 
-.achievements-block .achievements {
-  margin: 50px 0;
-}
 
 .review-block {
   background: url("../../../assets/images/main-page/review-block/background/review-background.png") #000;

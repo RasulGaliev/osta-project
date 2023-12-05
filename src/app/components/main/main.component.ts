@@ -9,6 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 export class MainComponent {
   sliderImgUrl: string = './assets/images/main-page/main-block/slider/slider1.png';
   titleImgUrl: string = './assets/images/main-page/main-block/main-title/main-title.svg';
+
   aboutImgUrl: string = './assets/images/main-page/about-block/about-img/about-img.png';
   aboutIcon1Url: string = './assets/images/main-page/about-block/icons/about-icon1.png';
   aboutIcon2Url: string = './assets/images/main-page/about-block/icons/about-icon2.png';
