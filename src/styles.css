@@ -30,6 +30,14 @@
   src: url('assets/fonts/montserrat-900.woff2') format('woff2');
 }
 
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url('assets/fonts/montserrat-300.woff2') format('woff2');
+}
+
 :root {
   color-scheme: only light
 }

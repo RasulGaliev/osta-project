@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -18,5 +19,25 @@ export class MainComponent {
   contactMapIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/map.svg';
   contactTelegramIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/telegram.svg';
   contactWhatsAppIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/whatsapp.svg';
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    // Подписываемся на изменения в route.params
+    this.route.fragment.subscribe(fragment => {
+      // fragment содержит значение фрагмента в URL
+      if (fragment === 'target') {
+        // Переместить пользователя к нужной секции страницы
+        this.scrollToTarget();
+      }
+    });
+  }
+  // Метод для прокрутки к секции с идентификатором "target"
+  scrollToTarget() {
+    const targetElement = document.getElementById('target');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    }
+  }
 
 }

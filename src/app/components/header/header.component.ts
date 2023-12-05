@@ -7,10 +7,11 @@ import { Component } from "@angular/core";
 })
 export class HeaderComponent {
   logoUrl: string = './assets/images/logo/logo.svg';
-  mainPageUrl: string = '#';
-  aboutPageUrl: string = '#';
-  galleryPageUrl: string = '#';
-  typesPageUrl: string = '#';
-  historyPageUrl: string = '#';
-  contactsPageUrl: string = '#';
+
+  mainPageUrl: string = '';
+  aboutPageUrl: string = 'about';
+  galleryPageUrl: string = 'gallery';
+  typesPageUrl: string = 'project-types';
+  historyPageUrl: string = 'history';
+  contactsPageUrl: string = '';
 }
