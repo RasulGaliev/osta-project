@@ -1,3 +1,11 @@
+.title h2 {
+  margin: 15px 0;
+}
+
+.text p {
+  font-size: 20px;
+}
+
 .project-types-block {
   background: url('../../../assets/images/project-types-page/project-types-block/background/project-types-background.svg');
   height: 990px;
@@ -32,4 +40,90 @@
 .project-types-block .type {
   text-align: center;
   /*margin-top: 50px;*/
+}
+
+
+
+.house-block {
+  background-color: #F2FAF7;
+}
+
+.house-block .container {
+  padding: 100px 0;
+}
+
+.house-block-text {
+  display: flex;
+}
+
+.house-block .text {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+
+
+.mall-block {
+  background-color: #001A25;
+  height: 986px;
+  color: white;
+}
+
+.mall-block .container {
+  padding: 100px 0;
+}
+
+.mall-block .mall-main {
+  display: flex;
+  align-items: center;
+}
+
+.mall-block .text{
+  padding-right: 80px;
+}
+
+.mall-block .main-img {
+  display: grid;
+  gap: 20px;
+}
+
+.mall-block .mall-img {
+  margin-top: 20px;
+}
+
+.factory-block .container {
+  padding: 100px 0;
+}
+
+.factory-block-text {
+  display: flex;
+}
+
+.factory-block .text {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+
+
+.interior-block {
+  background-color: #001A25;
+  height: 950px;
+  color: white;
+}
+
+.interior-block .container {
+  padding: 100px 0;
+  display: flex;
+}
+
+.interior-block .interior-text-img {
+  display: grid;
+  align-content: space-between;
+}
+
+.interior-block .text {
+  padding-right: 100px;
 }
