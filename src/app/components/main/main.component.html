@@ -76,7 +76,30 @@
 
   <div class="review-block">
     <div class="container">
-
+      <div *ngIf="reviews.length > 0" class="reviews">
+        <div class="first-block review">
+          <div class="text">
+            {{ reviews[currentIndex].text }}
+          </div>
+          <div class="title">
+            {{ reviews[currentIndex].author }}
+          </div>
+          <div>
+            <img [src]="reviewLogoUrl" alt="logo">
+          </div>
+        </div>
+        <div class="second-block review">
+          <div class="text">
+            {{ reviews[currentIndex2].text }}
+          </div>
+          <div class="title">
+            {{ reviews[currentIndex2].author }}
+          </div>
+          <div>
+            <img [src]="reviewLogoUrl" alt="logo">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
