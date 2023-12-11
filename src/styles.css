@@ -35,14 +35,14 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
-  src: url('assets/fonts/monserrat/montserrat-300.woff2') format('woff2');
+  src: url(assets/fonts/monserrat/montserrat-300.woff2) format('woff2');
 }
 
 
 
 @font-face {
   font-family: Cotlin;
-  src: url(../../../Documents/osta-project/src/assets/fonts/tt-cotlin/TT-Cotlin.otf) format("woff2");
+  src: url(assets/fonts/tt-cotlin/TT-Cotlin.otf) format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal
@@ -50,7 +50,7 @@
 
 @font-face {
   font-family: Cotlin;
-  src: url(../../../Documents/osta-project/src/assets/fonts/tt-cotlin/TT-Cotlin_Bl.otf) format("woff2");
+  src: url(assets/fonts/tt-cotlin/TT-Cotlin_Bl.otf) format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal
