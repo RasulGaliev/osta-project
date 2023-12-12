@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ReviewService} from "../../services/review.service";
 import {ReviewModel} from "../../models/review.model";
+import {AchievementsModel} from "../../models/achievements.model";
+import {AchievementsService} from "../../services/achievements.service";
+import {EventsModel} from "../../models/events.model";
+import {EventsService} from "../../services/events.service";
 
 @Component({
   selector: 'app-main',
@@ -9,6 +13,10 @@ import {ReviewModel} from "../../models/review.model";
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+  events: EventsModel[] = [];
+
+  achievements: AchievementsModel[] = [];
+
   reviews: ReviewModel[] = [];
   currentIndex: number = 0;
   currentIndex2: number = 1;
@@ -29,15 +37,22 @@ export class MainComponent {
   contactTelegramIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/telegram.svg';
   contactWhatsAppIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/whatsapp.svg';
 
-  constructor(private route: ActivatedRoute,  private reviewService: ReviewService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private reviewService: ReviewService,
+    private achievementsService: AchievementsService,
+    private eventsService: EventsService
+  ) {}
 
   ngOnInit() {
+    this.events = this.eventsService.getEvents();
     this.reviews = this.reviewService.getReview();
+    this.achievements = this.achievementsService.getAchievements();
 
     setInterval(() => {
       this.updateReviews()
     }, 10000);
-    
+
     // Подписываемся на изменения в route.params
     this.route.fragment.subscribe(fragment => {
       // fragment содержит значение фрагмента в URL
