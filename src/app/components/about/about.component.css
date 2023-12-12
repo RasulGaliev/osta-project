@@ -70,13 +70,37 @@
 }
 
 
+.step-block {
+  height: 766px;
+  color: white;
+  background: black;
+  padding: 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.step-block h2 {
+  margin: 0;
+}
+
+.step-block .steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  text-align: center;
+}
+
+.step-block .step {
+  text-align: center;
+}
+
 
 .team-block {
   background: url("../../../assets/images/about-page/team-block/background/team-background.png") #000;
   height: 1280px;
   background-size: cover;
   position: relative;
-  padding: 100px 0;
+  padding: 92px 0;
   text-align: center;
 }
 
