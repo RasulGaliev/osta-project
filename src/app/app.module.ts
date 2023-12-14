@@ -13,6 +13,8 @@ import { ProjectTypesComponent } from './components/project-types/project-types.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AchievementsComponent } from './components/achievements/achievements.component';
 import { CarouselModule } from 'primeng/carousel';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -32,7 +34,9 @@ import { CarouselModule } from 'primeng/carousel';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

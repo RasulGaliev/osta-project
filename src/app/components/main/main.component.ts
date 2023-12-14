@@ -6,6 +6,7 @@ import {AchievementsModel} from "../../models/achievements.model";
 import {AchievementsService} from "../../services/achievements.service";
 import {EventsModel} from "../../models/events.model";
 import {EventsService} from "../../services/events.service";
+import { FormService } from '../../services/form.service';
 
 @Component({
   selector: 'app-main',
@@ -37,13 +38,22 @@ export class MainComponent {
   contactTelegramIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/telegram.svg';
   contactWhatsAppIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/whatsapp.svg';
 
+  formNameIconUrl: string = './assets/images/main-page/contacts-block/form-icons/name.png';
+  formPhoneIconUrl: string = './assets/images/main-page/contacts-block/form-icons/phone.png';
+  formEmailIconUrl: string = './assets/images/main-page/contacts-block/form-icons/email.png';
+
+  modelName: string = '';
+  modelPhone: string = '';
+  modelEmail: string = '';
+  modelAgree: boolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private reviewService: ReviewService,
     private achievementsService: AchievementsService,
-    private eventsService: EventsService
+    private eventsService: EventsService,
+    private formService: FormService
   ) {}
-
   ngOnInit() {
     this.events = this.eventsService.getEvents();
     this.reviews = this.reviewService.getReview();
@@ -79,6 +89,20 @@ export class MainComponent {
     if (this.currentIndex2 >= this.reviews.length) {
       this.currentIndex2 = 1;
     }
+  }
+
+  onSubmit(formData: any): void {
+    // Вызывается при отправке формы
+    this.formService.submitForm(formData).subscribe(
+      (response) => {
+        console.log('Успешно отправлено:', response);
+        // Дополнительные действия при успешной отправке
+      },
+      (error) => {
+        console.error('Ошибка отправки:', error);
+        // Дополнительные действия при ошибке
+      }
+    );
   }
 
 }

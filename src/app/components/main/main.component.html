@@ -144,22 +144,33 @@
           <div class="text">
             <p>и мы обязательно свяжемся с вами</p>
           </div>
-          <div class="name">
-
+          <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+            <label for="name">
+              <div class="input-container">
+                <img [src]="formNameIconUrl" alt="name">
+                <input type="text" id="name" name="name" [(ngModel)]="modelName" placeholder="Имя" required>
+              </div>
+            </label>
+            <label for="phone">
+              <div class="input-container">
+                <img [src]="formPhoneIconUrl" alt="phone">
+                <input type="tel" id="phone" name="phone" [(ngModel)]="modelPhone" placeholder="Номер телефона" required>
+              </div>
+            </label>
+            <label for="email">
+              <div class="input-container">
+                <img [src]="formEmailIconUrl" alt="email">
+                <input type="email" id="email" name="email" [(ngModel)]="modelEmail" placeholder="E-mail" required>
+              </div>
+            </label>
+            <button type="submit">Отправить</button>
+            <label for="agree" class="agree-label">
+              <input type="checkbox" id="agree" [(ngModel)]="modelAgree" required>
+              Соглашаюсь с условиями передачи данных
+            </label>
+          </form>
           </div>
-          <div class="number">
 
-          </div>
-          <div class="email">
-
-          </div>
-          <div class="button">
-
-          </div>
-          <div class="agreement">
-
-          </div>
-        </div>
         <div class="contact-information">
           <div class="information">
             <div class="phones">
