@@ -74,24 +74,43 @@
   height: 766px;
   color: white;
   background: black;
-  padding: 100px;
+  padding: 80px;
   box-sizing: border-box;
   text-align: center;
 }
 
 .step-block h2 {
-  margin: 0;
+  margin: 0
 }
 
 .step-block .steps {
+  margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
   text-align: center;
 }
 
+.step-block .steps-2 {
+  grid-template-columns: repeat(2, 1fr);
+  width: 66%;
+  margin: 50px auto 0 auto;
+
+}
+
 .step-block .step {
   text-align: center;
+}
+
+.step-block .title h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.step-block .text p {
+  font-size: 20px;
+  margin: 7px 0 0 0;
 }
 
 
