@@ -7,6 +7,7 @@ import {AchievementsService} from "../../services/achievements.service";
 import {EventsModel} from "../../models/events.model";
 import {EventsService} from "../../services/events.service";
 import { FormService } from '../../services/form.service';
+import {ClientService} from "../../services/client.service";
 
 @Component({
   selector: 'app-main',
@@ -52,11 +53,13 @@ export class MainComponent {
     private reviewService: ReviewService,
     private achievementsService: AchievementsService,
     private eventsService: EventsService,
-    private formService: FormService
+    private formService: FormService,
+    private clientService: ClientService
   ) {}
   ngOnInit() {
+    // localStorage.setItem('lang', 'tt');
     this.events = this.eventsService.getEvents();
-    this.reviews = this.reviewService.getReview();
+    this.reviews = [];//this.reviewService.getReview();
     this.achievements = this.achievementsService.getAchievements();
 
     setInterval(() => {
@@ -71,6 +74,11 @@ export class MainComponent {
         this.scrollToTarget();
       }
     });
+
+    this.clientService.getAllReviews()
+      .subscribe(data =>{
+        this.reviews = data.data;
+      });
   }
   // Метод для прокрутки к секции с идентификатором "target"
   scrollToTarget() {
