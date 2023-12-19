@@ -1,6 +1,6 @@
 .main-block {
   background: url("../../../assets/images/main-page/main-block/background/main-background.png") #000;
-  height: 1280px;
+  height: 1080px;
   background-size: cover;
   position: relative;
 }
@@ -117,6 +117,8 @@
   font-size: 30px;
 }
 
+
+
 .review-block {
   background: url("../../../assets/images/main-page/review-block/background/review-background.png") #000;
   height: 480px;
@@ -163,7 +165,7 @@
 .contact-block .send-email {
   width: 320px;
   padding: 50px 80px;
-  border: solid 3px #009C66;
+  border: solid 3px #045F3E;
   border-radius: 5px;
 }
 
@@ -227,4 +229,64 @@
 .contact-block .contact-information .email,
 .contact-block .contact-information .address {
   margin-bottom: 25px;
+}
+
+.contact-block .input-container {
+  background-color: #F2F6FA;
+  margin: 20px 0;
+  height: 65px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.contact-block input {
+  color: #7E868E;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.contact-block input::placeholder {
+  background-color: #F2F6FA;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-block img {
+  margin: 0 10px 0 20px;
+}
+
+/* Убираем стандартные рамки вокруг полей ввода */
+.contact-block input,
+.contact-block textarea {
+  border: none;
+  outline: none;
+}
+
+.contact-block button {
+  width: 100%;
+  height: 80px;
+  border: solid 2px #045F3E;
+  border-radius: 8px;
+  background: white;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.contact-block .agree-label {
+  font-weight: 300;
+  font-size: 13px;
+  color: #7E868E;
+}
+
+.contact-block input:focus {
+  background-color: #F2F6FA;
+}
+.contact-block input:focus:not {
+  background-color: #F2F6FA;
+}
+
+
+.contact-block .checkbox-container input:checked ~ .checkmark {
+  background-color: #F2F6FA;
 }

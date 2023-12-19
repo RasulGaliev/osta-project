@@ -102,3 +102,11 @@ h2 {
   font-size: 48px;
   font-weight: 900;
 }
+
+
+
+
+
+.p-carousel-content ul {
+  display: none !important;
+}
