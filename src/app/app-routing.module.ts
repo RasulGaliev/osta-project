@@ -5,6 +5,7 @@ import {AboutComponent} from "./components/about/about.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {ProjectTypesComponent} from "./components/project-types/project-types.component";
 import {HistoryComponent} from "./components/history/history.component";
+import {HomelandComponent} from "./components/homeland/homeland.component";
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'project-types', component: ProjectTypesComponent },
   { path: 'history', component: HistoryComponent },
-
+  { path: 'homeland', component: HomelandComponent },
   { path: '**', redirectTo: '' }
 ];
 

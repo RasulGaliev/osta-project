@@ -15,6 +15,7 @@ import { AchievementsComponent } from './components/achievements/achievements.co
 import { CarouselModule } from 'primeng/carousel';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { HomelandComponent } from './components/homeland/homeland.component';
 
 
 
@@ -28,7 +29,8 @@ import {FormsModule} from "@angular/forms";
     GalleryComponent,
     HistoryComponent,
     ProjectTypesComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    HomelandComponent
   ],
   imports: [
     BrowserModule,
