@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FormService {
-  private apiUrl = 'http://osta.dimche.tatar/api/v1/';
+  private apiUrl = 'http://osta.dimche.tatar/api/v1/applications';
 
   constructor(private http: HttpClient) {}
 

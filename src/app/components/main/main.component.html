@@ -148,24 +148,24 @@
             <label for="name">
               <div class="input-container">
                 <img [src]="formNameIconUrl" alt="name">
-                <input type="text" id="name" name="name" [(ngModel)]="modelName" placeholder="Имя" required>
+                <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Имя" required>
               </div>
             </label>
             <label for="phone">
               <div class="input-container">
                 <img [src]="formPhoneIconUrl" alt="phone">
-                <input type="tel" id="phone" name="phone" [(ngModel)]="modelPhone" placeholder="Номер телефона" required>
+                <input type="tel" id="phone" name="phone" [(ngModel)]="phone" placeholder="Номер телефона" required>
               </div>
             </label>
             <label for="email">
               <div class="input-container">
                 <img [src]="formEmailIconUrl" alt="email">
-                <input type="email" id="email" name="email" [(ngModel)]="modelEmail" placeholder="E-mail" required>
+                <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="E-mail" required>
               </div>
             </label>
             <button type="submit">Отправить</button>
             <label for="agree" class="agree-label">
-              <input type="checkbox" id="agree" [(ngModel)]="modelAgree" required>
+              <input type="checkbox" id="agree" name="data_transfer_condition" [(ngModel)]="data_transfer_condition" required>
               Соглашаюсь с условиями передачи данных
             </label>
           </form>

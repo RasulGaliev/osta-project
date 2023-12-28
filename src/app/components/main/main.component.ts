@@ -39,10 +39,10 @@ export class MainComponent {
   formPhoneIconUrl: string = './assets/images/main-page/contacts-block/form-icons/phone.png';
   formEmailIconUrl: string = './assets/images/main-page/contacts-block/form-icons/email.png';
 
-  modelName: string = '';
-  modelPhone: string = '';
-  modelEmail: string = '';
-  modelAgree: boolean = false;
+  name: string = '';
+  phone: string = '';
+  email: string = '';
+  data_transfer_condition: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
