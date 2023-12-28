@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ReviewModel} from "../../models/review.model";
-import {AchievementsModel} from "../../models/achievements.model";
 import {EventsModel} from "../../models/events.model";
-import {EventsService} from "../../services/events.service";
 import { FormService } from '../../services/form.service';
 import {ClientService} from "../../services/client.service";
 
@@ -47,14 +45,10 @@ export class MainComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private eventsService: EventsService,
     private formService: FormService,
     private clientService: ClientService
   ) {}
   ngOnInit() {
-    this.events = this.eventsService.getEvents();
-    this.reviews = [];
-
     setInterval(() => {
       this.updateReviews()
     }, 10000);
@@ -72,6 +66,11 @@ export class MainComponent {
       .subscribe(data =>{
         this.reviews = data.data;
       });
+
+    this.clientService.getAllEventsPage()
+      .subscribe(data => {
+        this.events = data.data;
+      })
   }
   // Метод для прокрутки к секции с идентификатором "target"
   scrollToTarget() {

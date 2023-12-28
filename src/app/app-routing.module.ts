@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'history', component: HistoryComponent },
   { path: 'homeland', component: HomelandComponent },
   { path: 'event', component: EventComponent },
-  { path: 'definite-event', component: DefiniteEventComponent },
+  { path: 'event/:id', component: DefiniteEventComponent },
 
   { path: '**', redirectTo: '' }
 ];

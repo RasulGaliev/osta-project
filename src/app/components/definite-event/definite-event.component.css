@@ -8,7 +8,20 @@
   font-size: 128px;
   color: white;
 }
+
 .event-title-block .container-padding{
   padding: 140px 0;
   text-align:center;
+}
+
+.event-content-block {
+  padding-bottom: 50px;
+}
+
+.event-content-block .img img {
+  width: 700px;
+}
+
+.event-content-block .text p{
+  font-size: 20px;
 }

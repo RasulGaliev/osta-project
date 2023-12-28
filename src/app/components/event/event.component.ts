@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ClientService} from "../../services/client.service";
+import {EventsModel} from "../../models/events.model";
 
 @Component({
   selector: 'app-event',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './event.component.css'
 })
 export class EventComponent {
-  definiteEvent: string = '/definite-event';
+  events: EventsModel[] = [];
+  constructor(private clientService: ClientService) {}
+
+  ngOnInit() {
+    this.clientService.getAllEvents()
+      .subscribe(data => {
+        this.events = data.data;
+      });
+  }
 }

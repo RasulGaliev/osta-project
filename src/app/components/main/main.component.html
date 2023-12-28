@@ -69,30 +69,36 @@
   <div class="events-block">
     <div class="container">
       <div class="events-grid">
-        <div class="event-grid-item" *ngIf="events.length > 0">
-          <div class="img">
-            <img src="{{ events[events.length - 1].image }}" alt="event">
+        <a routerLink='/event/{{ events.length }}'>
+          <div class="event-grid-item" *ngIf="events.length > 0">
+            <div class="img">
+              <img src="{{ events[events.length - 1].image }}" alt="event">
+            </div>
+            <div class="text">
+              <p>{{ events[events.length - 1].title }}</p>
+            </div>
           </div>
-          <div class="text">
-            <p>{{ events[events.length - 1].title }}</p>
+        </a>
+        <a routerLink='/event/{{ events.length - 1 }}'>
+          <div class="event-grid-item" *ngIf="events.length > 1">
+            <div class="img">
+              <img src="{{ events[events.length - 2].image }}" alt="event">
+            </div>
+            <div class="text">
+              <p>{{ events[events.length - 2].title }}</p>
+            </div>
           </div>
-        </div>
-        <div class="event-grid-item" *ngIf="events.length > 1">
-          <div class="img">
-            <img src="{{ events[events.length - 2].image }}" alt="event">
+        </a>
+        <a routerLink='/event/{{ events.length - 2 }}'>
+          <div class="event-grid-item" *ngIf="events.length > 2">
+            <div class="img">
+              <img src="{{ events[events.length - 3].image }}" alt="event">
+            </div>
+            <div class="text">
+              <p>{{ events[events.length - 3].title }}</p>
+            </div>
           </div>
-          <div class="text">
-            <p>{{ events[events.length - 2].title }}</p>
-          </div>
-        </div>
-        <div class="event-grid-item" *ngIf="events.length > 2">
-          <div class="img">
-            <img src="{{ events[events.length - 3].image }}" alt="event">
-          </div>
-          <div class="text">
-            <p>{{ events[events.length - 3].title }}</p>
-          </div>
-        </div>
+        </a>
       </div>
       <div class="all-event-link">
         <a [routerLink]="eventRouting">все события...</a>

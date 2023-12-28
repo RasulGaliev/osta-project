@@ -17,4 +17,17 @@ export class ClientService {
   getAllAchievements(): Observable<any>{
     return this.http.get(this.apiUrl + "achievements");
   }
+
+  getAllEvents(): Observable<any> {
+    return this.http.get(this.apiUrl + "events")
+  }
+
+  getAllEventsPage(): Observable<any> {
+    return this.http.get(this.apiUrl + "events?page=1&limit=9")
+  }
+  getEvent(id: number): Observable<any> {
+    return this.http.get(this.apiUrl + "events/" + id);
+  }
+
+
 }
