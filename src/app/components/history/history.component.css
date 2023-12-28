@@ -1,0 +1,35 @@
+.history-block{
+  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
+  background-size: cover;
+}
+.history-block .title h1{
+  font-size: 128px;
+  color: white;
+}
+.history-block .container-padding{
+  padding: 224px 0;
+  text-align:center;
+}
+
+.history-block .container-padding .a-btn{
+  border-radius: 40px;
+  background: #FFFFFF99;
+  border: solid 3px #D8CE7F;
+  width: 780px;
+}
+.history-block .container-padding .a-btn:hover{
+  border-radius: 40px;
+  background: #FFFFFFCC;
+  border: solid 3px #D8CE7F;
+  width: 780px;
+}
+.history-block .container-padding .a-btn h2{
+  margin: 10px 0px 0px;
+}
+
+.history-routing-a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

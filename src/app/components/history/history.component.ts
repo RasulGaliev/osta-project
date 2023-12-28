@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './history.component.css'
 })
 export class HistoryComponent {
-
+  homelandPageUrl: string = '/homeland';
 }

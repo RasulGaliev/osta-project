@@ -19,7 +19,7 @@
 .main-block-text .text {
   text-align: center;
   margin-top: 25px;
-  font-size: 24px;
+  font-size: 30px;
   color: white;
 }
 
@@ -192,7 +192,7 @@
 }
 .contact-block .contact-information {
   margin-left: 20px;
-  padding: 25px 35px;
+  /*padding: 25px 35px;*/
   width: 530px;
 }
 
@@ -216,6 +216,10 @@
 .contact-block .phone {
   margin-right: 30px;
 }
+.contact-block a:hover{
+  color: #045F3E;
+}
+
 
 .contact-block .social-networks .telegram {
   margin-left: 50px;
@@ -229,6 +233,10 @@
 .contact-block .contact-information .email,
 .contact-block .contact-information .address {
   margin-bottom: 25px;
+}
+
+.contact-information .information{
+  padding: 0 35px 25px 0;
 }
 
 .contact-block .input-container {
@@ -262,6 +270,16 @@
   border: none;
   outline: none;
 }
+.main-map{
+
+  position:relative;
+  overflow:hidden
+}
+.main-map .main-iframe-map{
+  width: 580px;
+  height: 225px;
+
+}
 
 .contact-block button {
   width: 100%;
@@ -272,21 +290,25 @@
   font-size: 30px;
   margin-bottom: 15px;
 }
+.contact-block button:hover{
+  background: #045F3E;
+  color:white;
+}
 
 .contact-block .agree-label {
   font-weight: 300;
   font-size: 13px;
   color: #7E868E;
 }
-
-.contact-block input:focus {
-  background-color: #F2F6FA;
-}
-.contact-block input:focus:not {
-  background-color: #F2F6FA;
+.contact-block input{
+  padding: 0px;
 }
 
-
-.contact-block .checkbox-container input:checked ~ .checkmark {
-  background-color: #F2F6FA;
+.contact-block input:focus,
+.contact-block input:not(:focus) {
+  background-color: transparent;
 }
+
+
+
+

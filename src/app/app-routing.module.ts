@@ -6,6 +6,8 @@ import {GalleryComponent} from "./components/gallery/gallery.component";
 import {ProjectTypesComponent} from "./components/project-types/project-types.component";
 import {HistoryComponent} from "./components/history/history.component";
 import {HomelandComponent} from "./components/homeland/homeland.component";
+import {EventComponent} from "./components/event/event.component";
+import {DefiniteEventComponent} from "./components/definite-event/definite-event.component";
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -14,6 +16,9 @@ const routes: Routes = [
   { path: 'project-types', component: ProjectTypesComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'homeland', component: HomelandComponent },
+  { path: 'event', component: EventComponent },
+  { path: 'definite-event', component: DefiniteEventComponent },
+
   { path: '**', redirectTo: '' }
 ];
 

@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="all-event-link">
-        <a href="">все события...</a>
+        <a [routerLink]="eventRouting">все события...</a>
       </div>
     </div>
   </div>
@@ -175,13 +175,13 @@
           <div class="information">
             <div class="phones">
               <div class="phone-first phone">
-                <a href="tel:+79274823366">
+                <a href="tel:+79178958592">
                   <img [src]="contactPhoneIconUrl" alt="phone">
                   <p>8-927-482-33-66</p>
                 </a>
               </div>
               <div class="phone-second phone">
-                <a href="tel:+79274117279">
+                <a href="tel:+79178958592">
                   <img [src]="contactPhoneIconUrl" alt="phone">
                   <p>8-927-411-72-79</p>
                 </a>
@@ -194,26 +194,30 @@
               </a>
             </div>
             <div class="address">
-              <a href="https://yandex.ru/maps/?text=адрес">
+              <a href="https://yandex.ru/maps/43/kazan/house/ulitsa_amirkhana_yeniki_17b/YEAYdwJiTUIGQFtvfXt5dXpgZw==/?from=mapframe&ll=49.152470%2C55.784633&z=17">
                 <img [src]="contactMapIconUrl" alt="address">
-                <p>г. Казань, ул. Ваша улица, 1, офис 1</p>
+                <p>г. Казань, Амирхана Еники, 17Б</p>
               </a>
             </div>
             <div class="social-networks">
               <div class="WhatsApp">
-                <a href="https://wa.me/">
+                <a href="https://wa.me/+79178958592">
                   <img [src]="contactWhatsAppIconUrl" alt="WhatsApp">
                 </a>
               </div>
               <div class="telegram">
-                <a href="https://t.me/">
+                <a href="https://web.telegram.org/a/#1799097248">
                   <img [src]="contactTelegramIconUrl"alt="Telegram">
                 </a>
               </div>
             </div>
           </div>
           <div class="map">
-<!--            <img [src]="contactMapIconUrl" alt="Map">-->
+            <div style="position:relative;overflow:hidden;">
+              <iframe src="https://yandex.ru/map-widget/v1/?ll=49.152470%2C55.784633&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgk3Njk0NjI4NDUScdCg0L7RgdGB0LjRjywg0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0KLQsNGC0LDRgNGB0YLQsNC9LCDQmtCw0LfQsNC90YwsINGD0LvQuNGG0LAg0JDQvNC40YDRhdCw0L3QsCDQldC90LjQutC4LCAxN9CRIgoNIZxEQhV3I19C&z=17.11"
+                      width="500" height="225"  style="position:relative; border:none;">
+              </iframe>
+            </div>
           </div>
         </div>
       </div>

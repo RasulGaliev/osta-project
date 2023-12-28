@@ -14,6 +14,7 @@ import {ClientService} from "../../services/client.service";
 })
 export class MainComponent {
   events: EventsModel[] = [];
+  eventRouting: string = 'event';
 
   reviews: ReviewModel[] = [];
   currentIndex: number = 0;

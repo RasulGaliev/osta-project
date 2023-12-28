@@ -17,6 +17,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { HomelandComponent } from './components/homeland/homeland.component';
 import {LocalizationInterceptor} from "./services/localization-interceptor.service";
+import { EventComponent } from './components/event/event.component';
+import { DefiniteEventComponent } from './components/definite-event/definite-event.component';
 
 
 
@@ -31,7 +33,9 @@ import {LocalizationInterceptor} from "./services/localization-interceptor.servi
     HistoryComponent,
     ProjectTypesComponent,
     AchievementsComponent,
-    HomelandComponent
+    HomelandComponent,
+    EventComponent,
+    DefiniteEventComponent
   ],
   imports: [
     BrowserModule,
