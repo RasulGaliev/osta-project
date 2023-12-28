@@ -38,8 +38,6 @@
   src: url(assets/fonts/monserrat/montserrat-300.woff2) format('woff2');
 }
 
-
-
 @font-face {
   font-family: Cotlin;
   src: url(assets/fonts/tt-cotlin/TT-Cotlin.otf) format("woff2");
@@ -54,6 +52,56 @@
   font-weight: 700;
   font-display: swap;
   font-style: normal
+}
+
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 300;
+  src: url(assets/fonts/mplus/MPLUS1p-Light.ttf) format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/mplus/MPLUS1p-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 500;
+  src: url(assets/fonts/mplus/MPLUS1p-Medium.ttf) format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 700;
+  src: url(assets/fonts/mplus/MPLUS1p-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 800;
+  src: url(assets/fonts/mplus/MPLUS1p-ExtraBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 900;
+  src: url(assets/fonts/mplus/MPLUS1p-Black.ttf) format('ttf');
 }
 
 
@@ -82,7 +130,7 @@ body {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mplus', sans-serif;
   color: #000000;
   line-height: 1.25
 }
@@ -102,9 +150,6 @@ h2 {
   font-size: 48px;
   font-weight: 900;
 }
-
-
-
 
 
 .p-carousel-content ul {
