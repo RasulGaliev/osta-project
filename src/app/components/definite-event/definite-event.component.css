@@ -1,0 +1,14 @@
+.event-title-block{
+  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
+  height: 610px;
+  margin: 0 0 100px 0;
+}
+
+.event-title-block .title h1{
+  font-size: 128px;
+  color: white;
+}
+.event-title-block .container-padding{
+  padding: 140px 0;
+  text-align:center;
+}

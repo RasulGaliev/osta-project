@@ -1,0 +1,35 @@
+.event-title-block{
+  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
+  height: 610px;
+  margin: 0 0 100px 0;
+}
+
+.event-title-block .title h1{
+  font-size: 128px;
+  color: white;
+}
+.event-title-block .container-padding{
+  padding: 140px 0;
+  text-align:center;
+}
+.events-content-grid{
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+}
+.events-content-grid .event-small{
+  width: 380px;
+  overflow: hidden;
+  border: 2px solid #D8CE7F;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.events-content-grid .event-small p {
+  font-size: 20px;
+}
+.events-content-grid .event-small img{
+  width:300px;
+}
