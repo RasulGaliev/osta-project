@@ -13,9 +13,10 @@ import { ProjectTypesComponent } from './components/project-types/project-types.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AchievementsComponent } from './components/achievements/achievements.component';
 import { CarouselModule } from 'primeng/carousel';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { HomelandComponent } from './components/homeland/homeland.component';
+import {LocalizationInterceptor} from "./services/localization-interceptor.service";
 
 
 
@@ -40,7 +41,13 @@ import { HomelandComponent } from './components/homeland/homeland.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LocalizationInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

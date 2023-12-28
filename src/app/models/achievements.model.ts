@@ -1,7 +1,7 @@
 export interface AchievementsModel
 {
   id: number;
-  photo: string;
+  image: string;
   text: string;
 }
 

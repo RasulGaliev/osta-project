@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ReviewService} from "../../services/review.service";
 import {ReviewModel} from "../../models/review.model";
 import {AchievementsModel} from "../../models/achievements.model";
-import {AchievementsService} from "../../services/achievements.service";
 import {EventsModel} from "../../models/events.model";
 import {EventsService} from "../../services/events.service";
 import { FormService } from '../../services/form.service';
@@ -16,8 +14,6 @@ import {ClientService} from "../../services/client.service";
 })
 export class MainComponent {
   events: EventsModel[] = [];
-
-  achievements: AchievementsModel[] = [];
 
   reviews: ReviewModel[] = [];
   currentIndex: number = 0;
@@ -50,17 +46,13 @@ export class MainComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private reviewService: ReviewService,
-    private achievementsService: AchievementsService,
     private eventsService: EventsService,
     private formService: FormService,
     private clientService: ClientService
   ) {}
   ngOnInit() {
-    // localStorage.setItem('lang', 'tt');
     this.events = this.eventsService.getEvents();
-    this.reviews = [];//this.reviewService.getReview();
-    this.achievements = this.achievementsService.getAchievements();
+    this.reviews = [];
 
     setInterval(() => {
       this.updateReviews()

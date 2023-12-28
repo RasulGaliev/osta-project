@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {AchievementsModel} from "../../models/achievements.model";
-import {AchievementsService} from "../../services/achievements.service";
+import {ClientService} from "../../services/client.service";
 
 interface Product {
   name: string;
@@ -18,10 +18,13 @@ export class AchievementsComponent {
   achievements: AchievementsModel[] = [];
   responsiveOptions: any[] | undefined;
 
-  constructor(private achievementsService: AchievementsService) {}
+  constructor(private clientService: ClientService) {}
 
   ngOnInit() {
-    this.achievements = this.achievementsService.getAchievements();
+    this.clientService.getAllAchievements()
+        .subscribe(data =>{
+          this.achievements = data.data
+        });
 
     this.responsiveOptions = [
       {

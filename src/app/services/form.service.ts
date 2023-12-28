@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FormService {
-  private apiUrl = 'ваш_адрес_API';
+  private apiUrl = 'http://osta.dimche.tatar/api/v1/';
 
   constructor(private http: HttpClient) {}
 
