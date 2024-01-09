@@ -54,83 +54,22 @@
     <!--    Галерея-->
     <div class="gallery-content-block">
       <div class="content-list">
-
-        <div class="image-content">
-          <a>
-            <img src="../../../assets/images/gallery-page/temp-img/temp-mosque.png" >
-          </a>
-          <div class="title-content" >
-            <p>проект мечети</p>
-            <p class="big-p">"Хамид-250"</p>
-          </div>
-          <div class="search-icon">
-            <a>
-              <img class="for-css" src="../../../assets/images/gallery-page/icons/more-information.png">
+        <div *ngFor="let project of projects">
+          <div class="image-content">
+            <a routerLink="/gallery/{{ project.id }}">
+                <img [src]="project.images[0].src" alt="Image">
             </a>
+            <div class="title-content" >
+              <p>проект мечети</p>
+              <p class="big-p">"{{ project.title }}"</p>
+            </div>
+            <div class="search-icon">
+              <a>
+                <img class="for-css" src="../../../assets/images/gallery-page/icons/more-information.png">
+              </a>
+            </div>
           </div>
         </div>
-
-        <div class="image-content">
-          <a>
-            <img src="../../../assets/images/gallery-page/temp-img/temp-mosque1.jpg" >
-          </a>
-          <div class="title-content" >
-            <p>проект мечети</p>
-            <p class="big-p">"Хамид-250"</p>
-          </div>
-          <div class="search-icon">
-            <a>
-              <img class="for-css" src="../../../assets/images/gallery-page/icons/more-information.png">
-            </a>
-          </div>
-        </div>
-
-        <div class="image-content">
-          <a>
-            <img src="../../../assets/images/gallery-page/temp-img/temp-mosque.png" >
-          </a>
-          <div class="title-content" >
-            <p>проект мечети</p>
-            <p class="big-p">"Хамид-250"</p>
-          </div>
-          <div class="search-icon">
-            <a>
-              <img class="for-css" src="../../../assets/images/gallery-page/icons/more-information.png">
-            </a>
-          </div>
-        </div>
-
-        <div class="image-content">
-          <a>
-            <img src="../../../assets/images/gallery-page/temp-img/temp-mosque.png" >
-          </a>
-          <div class="title-content" >
-            <p>проект мечети</p>
-            <p class="big-p">"Хамид-250"</p>
-          </div>
-          <div class="search-icon">
-            <a>
-              <img class="for-css" src="../../../assets/images/gallery-page/icons/more-information.png">
-            </a>
-          </div>
-        </div>
-
-        <div class="image-content">
-          <a>
-            <img src="../../../assets/images/gallery-page/temp-img/temp-mosque.png" >
-          </a>
-          <div class="title-content" >
-            <p>проект мечети</p>
-            <p class="big-p">"Хамид-250"</p>
-          </div>
-          <div class="search-icon">
-            <a>
-              <img class="for-css" src="../../../assets/images/gallery-page/icons/more-information.png">
-            </a>
-          </div>
-        </div>
-
-
       </div>
     </div>
   </div>

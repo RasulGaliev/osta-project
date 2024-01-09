@@ -29,5 +29,13 @@ export class ClientService {
     return this.http.get(this.apiUrl + "events/" + id);
   }
 
+  getAllProjects(): Observable<any> {
+    return this.http.get(this.apiUrl + "buildings");
+  }
+
+  getProject(id: number): Observable<any>  {
+    return this.http.get(this.apiUrl + "buildings/" + id);
+  }
+
 
 }

@@ -19,6 +19,7 @@ import { HomelandComponent } from './components/homeland/homeland.component';
 import {LocalizationInterceptor} from "./services/localization-interceptor.service";
 import { EventComponent } from './components/event/event.component';
 import { DefiniteEventComponent } from './components/definite-event/definite-event.component';
+import { DefiniteGalleryComponent } from './components/definite-gallery/definite-gallery.component';
 
 
 
@@ -35,7 +36,8 @@ import { DefiniteEventComponent } from './components/definite-event/definite-eve
     AchievementsComponent,
     HomelandComponent,
     EventComponent,
-    DefiniteEventComponent
+    DefiniteEventComponent,
+    DefiniteGalleryComponent
   ],
   imports: [
     BrowserModule,

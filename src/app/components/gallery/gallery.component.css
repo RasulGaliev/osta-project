@@ -3,7 +3,7 @@
 }
 
 .gallery-title-block{
-  background: url("../../../assets/images/gallery-page/background/gallery-background.svg") no-repeat;
+  background: url("../../../assets/images/gallery-page/background/gallery-background.svg") no-repeat center;
   background-size: cover;
   height: 700px;
 }

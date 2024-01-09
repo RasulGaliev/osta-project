@@ -1,0 +1,29 @@
+.definite-gallery-block{
+  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
+  /*background-size: cover;*/
+  /*background-position: center;*/
+  height: 610px;
+  margin: 0 0 100px 0;
+}
+
+.definite-gallery-title-block .title h1{
+  font-size: 128px;
+  color: white;
+}
+
+.definite-gallery-title-block .container-padding{
+  padding: 140px 0;
+  text-align:center;
+}
+
+.definite-gallery-content-block {
+  padding-bottom: 50px;
+}
+
+.definite-gallery-content-block .img img {
+  width: 700px;
+}
+
+.definite-gallery-content-block .text p{
+  font-size: 20px;
+}
