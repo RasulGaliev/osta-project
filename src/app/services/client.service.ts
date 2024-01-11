@@ -37,5 +37,8 @@ export class ClientService {
     return this.http.get(this.apiUrl + "buildings/" + id);
   }
 
+  getAllHomeland(): Observable<any> {
+    return this.http.get(this.apiUrl + "mosque-histories");
+  }
 
 }

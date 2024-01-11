@@ -1,23 +1,23 @@
-.homeland-block{
+.homeland-block {
   background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
   background-size: cover;
   height: 806px;
 }
-.homeland-block .title h1{
+.homeland-block .title h1 {
   font-size: 128px;
   color: white;
 }
-.homeland-block .container-padding{
+.homeland-block .container-padding {
   padding: 224px 0;
   text-align:center;
 }
 
-.homeland-block .description h1{
+.homeland-block .description h1 {
   font-size: 64px;
   color: white;
 }
 
-.homeland-content .content-img-slider .temp-flex{
+.homeland-content .content-img-slider .temp-flex {
   padding: 25px 0 30px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -26,14 +26,19 @@
   grid-row-end: span 2;
 }
 
-.homeland-content .content-description{
+.homeland-content .content-description {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
-.homeland-content .content-description p{
-
+.homeland-content .content-description p {
+  font-size: 20px;
   width: 580px;
+}
+
+.homeland-content .content-description h2 {
+  font-size: 30px;
+  font-weight: 400;
 }

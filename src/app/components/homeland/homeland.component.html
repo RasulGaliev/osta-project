@@ -15,32 +15,24 @@
   </div>
   <div class="homeland-content">
     <div class="container">
-      <div class="content-img-slider">
-        <!--         <p>слайдер или что тут должно быть хз</p>-->
-        <div class="temp-flex">
-
-          <div class="temp-image">
-            <img src="../../../assets/images/homeland-page/temp-files/mosque.png">
+      <div *ngFor="let content of homeland">
+        <div class="content-img-slider">
+          <div class="temp-flex">
+            <div *ngFor="let image of content.images">
+              <div class="temp-image">
+                <img [src]="image.src">
+              </div>
+            </div>
           </div>
-          <div class="temp-image">
-            <img src="../../../assets/images/homeland-page/temp-files/mosque.png">
-          </div>
-          <div class="temp-image">
-            <img src="../../../assets/images/homeland-page/temp-files/mosque.png">
-          </div>
-
-
-
         </div>
-      </div>
-      <div class="content-description">
-        <h1>
-          Название мечети
-        </h1>
-        <p>
-          Описание мечети рассказ о нем  мечети рассказ о нем  мечети рассказ о нем  мечети рассказ о нем
-          мечети рассказ о нем  мечети рассказ о нем  мечети рассказ о нем  мечети рассказ о нем  мечети рассказ о нем
-        </p>
+        <div class="content-description">
+          <h2>
+            {{ content.title }}
+          </h2>
+          <p>
+            {{ content.text }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
