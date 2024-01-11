@@ -1,17 +1,18 @@
-.definite-gallery-block{
-  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
-  /*background-size: cover;*/
-  /*background-position: center;*/
-  height: 610px;
-  margin: 0 0 100px 0;
+.definite-gallery-page {
+  padding-top: 0;
+}
+.definite-gallery-block {
+  background: url('../../../assets/images/homeland-page/background/homeland.svg') no-repeat center;
+  background-size: cover;
+  height: 800px;
 }
 
-.definite-gallery-title-block .title h1{
-  font-size: 128px;
+.definite-gallery-block .title {
+  padding-top: 630px;
   color: white;
 }
 
-.definite-gallery-title-block .container-padding{
+.definite-gallery-title-block .container-padding {
   padding: 140px 0;
   text-align:center;
 }
@@ -20,10 +21,37 @@
   padding-bottom: 50px;
 }
 
-.definite-gallery-content-block .img img {
-  width: 700px;
+
+.definite-gallery-content-block .text p {
+  font-size: 20px;
 }
 
-.definite-gallery-content-block .text p{
-  font-size: 20px;
+.image-text {
+  display: flex;
+  padding-top: 100px;
+  justify-content: space-between;
+}
+.img img {
+  width: 500px;
+  height: 375px;
+}
+
+.text {
+  width: 600px;
+  background: #E6EFEE;
+  border-radius: 20px;
+  padding: 20px 10px;
+}
+
+.content-img .temp-flex {
+  padding: 100px 0 30px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 440px;
+  grid-row-gap: 1em;
+  grid-row-end: span 2;
+}
+
+.image img {
+  width: 545px;
 }
