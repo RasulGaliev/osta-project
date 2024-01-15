@@ -1,7 +1,9 @@
 // form.service.ts
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {ProjectFilterModel} from "../models/project-filter.model";
+import {ProjectsModel} from "../models/projects.model";
 
 @Injectable({
   providedIn: 'root',
@@ -36,9 +38,18 @@ export class ClientService {
   getProject(id: number): Observable<any>  {
     return this.http.get(this.apiUrl + "buildings/" + id);
   }
+  lang = localStorage.getItem('lang') || 'ru';
+  getProjectFilter(filter: ProjectFilterModel): Observable<any> {
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'X-Localization': this.lang  });
+    const params = new HttpParams({ fromObject: filter as any });
+
+    return this.http.get<ProjectsModel[]>(this.apiUrl + "buildings", {
+      // headers: headers,
+      params: params
+    });
+  }
 
   getAllHomeland(): Observable<any> {
     return this.http.get(this.apiUrl + "mosque-histories");
   }
-
 }
