@@ -39,12 +39,10 @@ export class ClientService {
     return this.http.get(this.apiUrl + "buildings/" + id);
   }
   lang = localStorage.getItem('lang') || 'ru';
-  getProjectFilter(filter: ProjectFilterModel): Observable<any> {
-    // const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'X-Localization': this.lang  });
-    const params = new HttpParams({ fromObject: filter as any });
+  getProjectFilter(params: HttpParams): Observable<any> {
+    // const params = new HttpParams({ fromObject: filter as any });
 
     return this.http.get<ProjectsModel[]>(this.apiUrl + "buildings", {
-      // headers: headers,
       params: params
     });
   }

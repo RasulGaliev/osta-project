@@ -25,16 +25,16 @@
           <div class="p-title"><p>вместимость</p></div>
           <div class="input">
             <label class="capacity-label">
-              <input type="checkbox" id="up-to-50" > до 50 человк
+              <input type="checkbox" id="up-to-50" [(ngModel)]="filter.upTo50"> до 50 человк
             </label>
             <label>
-              <input type="checkbox" id="from-50-to-100" > 50-100 человек
+              <input type="checkbox" id="from-50-to-100" [(ngModel)]="filter.from50To100"> 50-100 человек
             </label>
             <label>
-              <input type="checkbox" id="from-100-to-300" > 100-300 человек
+              <input type="checkbox" id="from-100-to-300" [(ngModel)]="filter.from100To300"> 100-300 человек
             </label>
             <label>
-              <input type="checkbox" id="more-300" > более 300 человек
+              <input type="checkbox" id="more-300" [(ngModel)]="filter.more300"> более 300 человек
             </label>
           </div>
         </div>
@@ -42,13 +42,14 @@
           <div class="p-title"><p>статус</p></div>
           <div class="input">
             <label class="capacity-label">
-              <input type="checkbox" id="sketch" > эскиз
+              <input type="checkbox" id="sketch" [(ngModel)]="filter.sketch"> эскиз
             </label>
             <label>
-              <input type="checkbox" id="built" > построенно
+              <input type="checkbox" id="built" [(ngModel)]="filter.built"> построенно
             </label>
           </div>
         </div>
+        <button (click)="applyFilter()">Apply Filter</button>
       </div>
     </div>
     <!--    Галерея-->
