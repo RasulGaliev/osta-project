@@ -22,11 +22,21 @@ export class GalleryComponent {
   };
   minCompatibility: number = -1;
   maxCompatibility: number = 1000000;
+
+  totalPages: number = 0;
+  currentPage: number = 1;
+  readonly limit: number = 12;
   ngOnInit() {
-    this.output();
+    this.clientService.getAllProjects()
+      .subscribe(data => {
+        this.totalPages = Math.ceil(data.data.length / this.limit);
+      })
+    this.loadEvents();
   }
-  public output() {
+  public loadEvents() {
     let  params = new HttpParams()
+      .set('page', this.currentPage)
+      .set('limit', this.limit)
       .set('compatibility[from]', this.minCompatibility)
       .set('compatibility[to]', this.maxCompatibility)
     if (this.filter.sketch) {
@@ -73,6 +83,11 @@ export class GalleryComponent {
       }
       this.maxCompatibility = 1000000;
     }
-    this.output();
+    this.loadEvents();
+  }
+
+  onPageChange(page: number) {
+    this.currentPage = page;
+    this.loadEvents();
   }
 }
