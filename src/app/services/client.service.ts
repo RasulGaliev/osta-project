@@ -10,23 +10,16 @@ import {ProjectsModel} from "../models/projects.model";
 })
 export class ClientService {
   private apiUrl = 'http://osta.dimche.tatar/api/v1/';
-
   constructor(private http: HttpClient) {}
   getAllReviews(): Observable<any>{
     return this.http.get(this.apiUrl + "reviews");
   }
-
   getAllAchievements(): Observable<any>{
     return this.http.get(this.apiUrl + "achievements");
   }
-
   getAllEvents(): Observable<any> {
     return this.http.get(this.apiUrl + "events")
   }
-
-  // getAllEventsPage(): Observable<any> {
-  //   return this.http.get(this.apiUrl + "events?page=1&limit=9")
-  // }
   getAllEventsPage(params: HttpParams): Observable<any> {
     return this.http.get(this.apiUrl + "events", {
       params: params
@@ -53,4 +46,11 @@ export class ClientService {
   getAllHomeland(): Observable<any> {
     return this.http.get(this.apiUrl + "mosque-histories");
   }
+
+  getAllHomelandPage(params: HttpParams): Observable<any> {
+    return this.http.get(this.apiUrl + "mosque-histories", {
+      params: params
+    })
+  }
+
 }
