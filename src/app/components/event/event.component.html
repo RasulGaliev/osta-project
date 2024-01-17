@@ -22,5 +22,11 @@
       </div>
     </div>
   </div>
+  <div class="pagination-container">
+    <img class="pagination-arrow" (click)="onPageChange(currentPage - 1)" [hidden]="currentPage === 1" src="assets/images/icons/scroll/left.svg" alt="left">
+    <span class="page">{{ currentPage }}</span>
+    <img class="pagination-arrow" (click)="onPageChange(currentPage + 1)" [hidden]="currentPage === totalPages" src="assets/images/icons/scroll/right.svg" alt="left">
+  </div>
+
 </div>
 

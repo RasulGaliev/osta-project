@@ -4,6 +4,7 @@ import {ReviewModel} from "../../models/review.model";
 import {EventsModel} from "../../models/events.model";
 import { FormService } from '../../services/form.service';
 import {ClientService} from "../../services/client.service";
+import {HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-main',
@@ -67,7 +68,10 @@ export class MainComponent {
         this.reviews = data.data;
       });
 
-    this.clientService.getAllEventsPage()
+    const params = new HttpParams()
+      .set('page', 1)
+      .set('limit', 3);
+    this.clientService.getAllEventsPage(params)
       .subscribe(data => {
         this.events = data.data;
       })

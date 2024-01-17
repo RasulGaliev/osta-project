@@ -24,8 +24,13 @@ export class ClientService {
     return this.http.get(this.apiUrl + "events")
   }
 
-  getAllEventsPage(): Observable<any> {
-    return this.http.get(this.apiUrl + "events?page=1&limit=9")
+  // getAllEventsPage(): Observable<any> {
+  //   return this.http.get(this.apiUrl + "events?page=1&limit=9")
+  // }
+  getAllEventsPage(params: HttpParams): Observable<any> {
+    return this.http.get(this.apiUrl + "events", {
+      params: params
+    });
   }
   getEvent(id: number): Observable<any> {
     return this.http.get(this.apiUrl + "events/" + id);
@@ -40,8 +45,6 @@ export class ClientService {
   }
   lang = localStorage.getItem('lang') || 'ru';
   getProjectFilter(params: HttpParams): Observable<any> {
-    // const params = new HttpParams({ fromObject: filter as any });
-
     return this.http.get<ProjectsModel[]>(this.apiUrl + "buildings", {
       params: params
     });
