@@ -24,10 +24,20 @@
 }
 
 .main-block-img img {
-  width: 560px;
-  height: 625px;
+  /*width: 560px;*/
+  height: 580px;
   object-fit: cover;
 }
+
+.fade-in-out {
+  display: block;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.fade-in-out.fade-out {
+  opacity: 0;
+}
+
 
 
 

@@ -19,7 +19,18 @@ export class MainComponent {
   currentIndex: number = 0;
   currentIndex2: number = 1;
 
-  sliderImgUrl: string = './assets/images/main-page/main-block/slider/slider1.png';
+  sliderImagesUrl: string[] = [
+    './assets/images/main-page/main-block/slider/slider1.png',
+    './assets/images/main-page/main-block/slider/slider2.png',
+    './assets/images/main-page/main-block/slider/slider3.png',
+    './assets/images/main-page/main-block/slider/slider4.png',
+    './assets/images/main-page/main-block/slider/slider5.png'
+  ];
+  currentSliderIndex: number = 0;
+  showImage: boolean = true;
+  intervalId: any;
+  readonly sliderTime:number = 10000;
+
   titleImgUrl: string = './assets/images/main-page/main-block/main-title/main-title.svg';
 
   aboutImgUrl: string = './assets/images/main-page/about-block/about-img/about-img.png';
@@ -50,6 +61,9 @@ export class MainComponent {
     private clientService: ClientService
   ) {}
   ngOnInit() {
+    this.intervalId = setInterval(() => {
+      this.nextImage();
+    }, this.sliderTime);
     setInterval(() => {
       this.updateReviews()
     }, 10000);
@@ -107,6 +121,16 @@ export class MainComponent {
         // Дополнительные действия при ошибке
       }
     );
+  }
+  get currentImage(): string {
+    return this.sliderImagesUrl[this.currentSliderIndex];
+  }
+  nextImage(): void {
+    this.showImage = false;
+    setTimeout(() => {
+      this.currentSliderIndex = (this.currentSliderIndex + 1) % this.sliderImagesUrl.length;
+      this.showImage = true;
+    }, 700);
   }
 
 }

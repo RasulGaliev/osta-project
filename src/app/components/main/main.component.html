@@ -3,7 +3,10 @@
     <div class="container">
       <div class="main-block-text-img">
         <div class="main-block-img">
-          <img [src]="sliderImgUrl" alt="sliderImg">
+          <div *ngIf="currentImage" class="fade-in-out" [class.fade-out]="!showImage">
+            <img [src]="currentImage" alt="Image">
+          </div>
+<!--          <img [src]="sliderImgUrl" alt="sliderImg">-->
         </div>
         <div class="main-block-text">
           <div class="title">
