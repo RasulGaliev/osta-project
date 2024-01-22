@@ -61,21 +61,10 @@ export class MainComponent {
     private clientService: ClientService
   ) {}
   ngOnInit() {
-    this.intervalId = setInterval(() => {
-      this.nextImage();
-    }, this.sliderTime);
-    setInterval(() => {
-      this.updateReviews()
-    }, 10000);
+    this.switchImg();
 
     // Подписываемся на изменения в route.params
-    this.route.fragment.subscribe(fragment => {
-      // fragment содержит значение фрагмента в URL
-      if (fragment === 'target') {
-        // Переместить пользователя к нужной секции страницы
-        this.scrollToTarget();
-      }
-    });
+    this.subscribeToChanges();
 
     this.clientService.getAllReviews()
       .subscribe(data =>{
@@ -90,6 +79,35 @@ export class MainComponent {
         this.events = data.data;
       })
   }
+
+  subscribeToChanges() {
+    this.route.fragment.subscribe(fragment => {
+      // fragment содержит значение фрагмента в URL
+      if (fragment === 'target') {
+        // Переместить пользователя к нужной секции страницы
+        this.scrollToTarget();
+      }
+    });
+  }
+   switchImg() {
+     this.intervalId = setInterval(() => {
+       this.nextImage();
+     }, this.sliderTime);
+     setInterval(() => {
+       this.updateReviews()
+     }, 10000);
+   }
+  get currentImage(): string {
+    return this.sliderImagesUrl[this.currentSliderIndex];
+  }
+  nextImage(): void {
+    this.showImage = false;
+    setTimeout(() => {
+      this.currentSliderIndex = (this.currentSliderIndex + 1) % this.sliderImagesUrl.length;
+      this.showImage = true;
+    }, 500);
+  }
+
   // Метод для прокрутки к секции с идентификатором "target"
   scrollToTarget() {
     const targetElement = document.getElementById('target');
@@ -122,15 +140,6 @@ export class MainComponent {
       }
     );
   }
-  get currentImage(): string {
-    return this.sliderImagesUrl[this.currentSliderIndex];
-  }
-  nextImage(): void {
-    this.showImage = false;
-    setTimeout(() => {
-      this.currentSliderIndex = (this.currentSliderIndex + 1) % this.sliderImagesUrl.length;
-      this.showImage = true;
-    }, 700);
-  }
+
 
 }

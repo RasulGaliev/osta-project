@@ -20,6 +20,7 @@ import {LocalizationInterceptor} from "./services/localization-interceptor.servi
 import { EventComponent } from './components/event/event.component';
 import { DefiniteEventComponent } from './components/definite-event/definite-event.component';
 import { DefiniteGalleryComponent } from './components/definite-gallery/definite-gallery.component';
+import {ToastModule} from "primeng/toast";
 
 
 
@@ -45,7 +46,8 @@ import { DefiniteGalleryComponent } from './components/definite-gallery/definite
     BrowserAnimationsModule,
     CarouselModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastModule
   ],
   providers: [
     {
