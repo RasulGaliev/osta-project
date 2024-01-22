@@ -141,6 +141,11 @@ body {
   margin: 0 auto;
 }
 
+
+p {
+  font-size: 20px;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -151,6 +156,10 @@ h2 {
   font-weight: 900;
 }
 
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
 
 .p-carousel-content ul {
   display: none !important;

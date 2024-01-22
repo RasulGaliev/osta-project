@@ -2,7 +2,7 @@
   background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
   background-size: cover;
 }
-.history-block .title h1{
+.history-block .title h1 {
   font-size: 128px;
   color: white;
 }
@@ -23,8 +23,8 @@
   border: solid 3px #D8CE7F;
   width: 780px;
 }
-.history-block .container-padding .a-btn h2{
-  margin: 10px 0px 0px;
+.history-block .container-padding .a-btn h2 {
+  margin: 10px 0 0;
 }
 
 .history-routing-a{
@@ -33,3 +33,6 @@
   align-items: center;
 }
 
+.history-info {
+  padding-bottom: 70px;
+}

@@ -52,5 +52,7 @@ export class ClientService {
       params: params
     })
   }
-
+  getHistory(): Observable<any> {
+    return this.http.get(this.apiUrl + 'history');
+  }
 }
