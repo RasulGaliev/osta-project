@@ -28,18 +28,13 @@ export class AchievementsComponent {
 
     this.responsiveOptions = [
       {
-        breakpoint: '1199px',
-        numVisible: 1,
-        numScroll: 1
-      },
-      {
-        breakpoint: '991px',
+        breakpoint: '1279px',
         numVisible: 2,
         numScroll: 1
       },
       {
         breakpoint: '767px',
-        numVisible: 1,
+        numVisible: 2,
         numScroll: 1
       }
     ];

@@ -21,3 +21,9 @@ footer {
   margin-right: 50px;
 }
 
+@media screen and (max-width: 1279px) {
+  .footer-block {
+    width: 100%;
+    align-items: center;
+  }
+}

@@ -141,7 +141,6 @@ body {
   margin: 0 auto;
 }
 
-
 p {
   font-size: 20px;
 }
@@ -196,7 +195,23 @@ h3 {
   margin: 0 10px;
 }
 
+@media screen and (max-width: 1279px) {
+  .container {
+    max-width: 720px;
+  }
 
+  p {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
 
 
 
