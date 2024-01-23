@@ -10,6 +10,7 @@ export class ProjectTypesComponent {
 
   houseMainImgUrl: string = './assets/images/project-types-page/house-block/house-main.png';
   houseGridImgUrl: string = './assets/images/project-types-page/house-block/house-grid.png';
+  houseGridImgUrl2: string = './assets/images/project-types-page/house-block/house-grid2.png';
 
   malImg1Url: string = './assets/images/project-types-page/mall-block/mall1.png';
   malImg2Url: string = './assets/images/project-types-page/mall-block/mall2.png';
@@ -20,4 +21,5 @@ export class ProjectTypesComponent {
 
   interiorMainImgUrl: string = './assets/images/project-types-page/interior-block/interior-main.png';
   interiorGridImgUrl: string = './assets/images/project-types-page/interior-block/interior-grid.png';
+  interiorGridImgUrl2: string = './assets/images/project-types-page/interior-block/interior-grid2.png';
 }

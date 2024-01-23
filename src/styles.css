@@ -162,6 +162,7 @@ h3 {
 
 .p-carousel-content ul {
   display: none !important;
+  line-height: 28px;
 }
 
 .p-carousel-prev, .p-carousel-next {
@@ -202,6 +203,7 @@ h3 {
 
   p {
     font-size: 15px;
+    line-height: 22px;
   }
 
   h2 {

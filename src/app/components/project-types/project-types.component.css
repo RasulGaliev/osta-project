@@ -2,22 +2,17 @@
   margin: 15px 0;
 }
 
-.text p {
-  font-size: 20px;
-}
+
 
 .project-types-block {
-  background: url('../../../assets/images/project-types-page/project-types-block/background/project-types-background.svg');
+  background: url('../../../assets/images/project-types-page/project-types-block/background/project-types-background.svg') center;
   height: 990px;
-  /*padding: 100px 0;*/
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 .project-types-block .title {
   padding-top: 230px;
-}
-
-.project-types-block .text {
-  font-size: 20px;
 }
 
 .project-types-block h2,
@@ -25,22 +20,45 @@
   color: white;
 }
 
-.project-types-block .types-grid {
-  width: 500px;
-  margin-top: 100px;
-  display: grid;
-  gap: 40px 80px;
-  grid-template-columns: repeat(2, 1fr);  /* две колонки. 1fr гарантирует, что каждая колонка займет равную часть.*/
-}
-
-/*.project-types-block .types-item {*/
-/*  display: flex;*/
-/*}*/
-
 .project-types-block .type {
   text-align: center;
-  /*margin-top: 50px;*/
 }
+
+@media screen and (min-width: 1280px) {
+  .project-types-block .types-grid {
+    width: 600px;
+    margin-top: 100px;
+    gap: 40px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* две колонки. 1fr гарантирует, что каждая колонка займет равную часть.*/
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .project-types-block .types-grid {
+    width: 500px;
+    margin-top: 70px;
+    margin-left: -50px;
+    gap: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-types-block {
+    height: 732px;
+  }
+
+  .project-types-block .title {
+    padding-top: 160px;
+  }
+
+  .project-types-block .types-grid .types-item:nth-child(3) {
+    margin-right: calc(50% - 40px);
+  }
+}
+
+
 
 
 
@@ -54,6 +72,7 @@
 
 .house-block-text {
   display: flex;
+  align-items: center;
 }
 
 .house-block .text {
@@ -61,6 +80,29 @@
   align-items: center;
   margin-left: 60px;
 }
+
+@media screen and (min-width: 1280px) {
+  .house-block .grid-img2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .house-block .main-img img {
+    width: 724px;
+    height: 439px;
+  }
+
+  .house-block .text {
+    margin-left: 30px;
+  }
+
+  .house-block .grid-img {
+    display: none;
+  }
+}
+
+
 
 
 
@@ -79,9 +121,7 @@
   align-items: center;
 }
 
-.mall-block .text{
-  padding-right: 80px;
-}
+
 
 .mall-block .main-img {
   display: grid;
@@ -92,12 +132,65 @@
   margin-top: 20px;
 }
 
+@media screen and (min-width: 1280px) {
+  .mall-block .text{
+    padding-right: 80px;
+  }
+
+  .mall-block .title1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .mall-block {
+    height: 1330px;
+  }
+
+  .mall-block .mall-main {
+    flex-wrap: wrap;
+  }
+
+  .mall-block .main-img {
+    width: 100%;
+  }
+
+  .mall-block .main-img img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .mall-block .mall-text {
+    order: 2;
+    padding: 10px 0;
+  }
+
+  .mall-block .title2 {
+    display: none;
+  }
+
+  .mall-block .title1 {
+    margin-bottom: 10px;
+  }
+
+  .mall-block .mall-img img {
+    width: 100%;
+    height: 216px;
+    object-fit: cover;
+  }
+}
+
+
+
+
 .factory-block .container {
   padding: 100px 0;
 }
 
 .factory-block-text {
   display: flex;
+  align-items: center;
 }
 
 .factory-block .text {
@@ -105,6 +198,44 @@
   align-items: center;
   margin-left: 60px;
 }
+
+@media screen and (max-width: 1279px) {
+  .factory-block .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .factory-block .main-img {
+    order: 3;
+  }
+
+  .factory-block .factory-block-text {
+    order: 2;
+  }
+
+  .factory-block .grid-img {
+    order: 1;
+    width: 100%;
+  }
+
+  .factory-block .main-img img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+
+  .factory-block .grid-img img {
+    width: 100%;
+    height: 439px;
+    object-fit: cover;
+  }
+
+  .factory-block .text {
+    margin-left: 30px;
+  }
+}
+
+
 
 
 
@@ -116,6 +247,9 @@
 
 .interior-block .container {
   padding: 100px 0;
+}
+
+.interior-block .interior-flex {
   display: flex;
 }
 
@@ -126,4 +260,29 @@
 
 .interior-block .text {
   padding-right: 100px;
+}
+
+@media screen and (min-width: 1280px) {
+  .interior-block .grid-img2  {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .interior-block .main-img img {
+    width: 268px;
+    height: 419px
+  }
+
+  .interior-block .grid-img  {
+    display: none;
+  }
+
+  .interior-block .text {
+    padding-right: 30px;
+  }
+
+  .interior-block .grid-img2 img  {
+    width: 720px;
+  }
 }
