@@ -3,7 +3,7 @@
   background: url("../../../assets/images/about-page/about-block/background/about-background.png") #000 center;
   height: 1280px;
   background-size: cover;
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
   position: relative;
   color: white;
 }
@@ -14,8 +14,13 @@
 
 .about-block .about-block-text .text {
   margin-top: 25px;
-  font-size: 20px;
 }
+
+.about-block .about-block-text .text p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
 
 .about-block .about-block-img {
   width: 580px;
@@ -47,9 +52,10 @@
   font-weight: 400;
 }
 
-.about-block .grid-item .text {
+.about-block .grid-item .text p {
   font-size: 15px;
   font-weight: 300;
+  line-height: 22px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -62,9 +68,16 @@
     width: 450px;
   }
 
+  .about-block .about-block-text .text p {
+    line-height: 22px;
+  }
+
   .about-block .about-grid {
     display: flex;
     text-align: start;
+    width: 680px;
+    margin-top: 10px;
+    gap: 30px 60px;
   }
 
   .about-block .grid-item {
@@ -74,7 +87,8 @@
   }
 
   .grid-item:nth-child(1) {
-    flex-basis: 100%;
+    /*flex-basis: 100%;*/
+    margin-right: 50%;
   }
   .grid-item:nth-child(3) {
     flex-basis: 50%;
@@ -86,6 +100,7 @@
   }
 
   .about-block .grid-item .text {
+    line-height: 22px;
     font-size: 15px;
     font-weight: 300;
   }
@@ -142,17 +157,11 @@
 
 .step-block .steps {
   margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
   text-align: center;
-}
-
-.step-block .steps-2 {
-  grid-template-columns: repeat(2, 1fr);
-  width: 66%;
-  margin: 50px auto 0 auto;
-
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+  gap: 60px;
+  justify-content: flex-start; /* Вернем равномерное распределение по горизонтали */
 }
 
 .step-block .step {
@@ -170,40 +179,33 @@
   margin: 7px 0 0 0;
 }
 
+@media screen and (min-width: 1280px) {
+  .step-block .step {
+    flex: 0 0 calc(33.33% - 60px); /* Три блока в строке, учитывая отступы */
+  }
+
+  .step:nth-child(4) {
+    margin-left: calc(100% / 6);
+  }
+}
+
 @media screen and (max-width: 1279px) {
   .step-block {
     height: 839px;
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .step-block .steps {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
-    text-align: center;
-  }
-
-  .step-block .steps-2 {
-    grid-template-columns: repeat(2, 1fr);
-    width: 66%;
-    margin: 50px auto 0 auto;
-
+    margin-top: 40px;
+    gap: 30px;
   }
 
   .step-block .step {
-    text-align: center;
+    flex: 0 0 calc(50% - 30px); /* Три блока в строке, учитывая отступы */
   }
 
-  .step-block .title h3 {
-    font-size: 30px;
-    font-weight: 400;
-    margin: 15px 0;
-  }
-
-  .step-block .text p {
-    font-size: 20px;
-    margin: 7px 0 0 0;
+  .step:nth-child(5) {
+    margin-left: 25%;
   }
 }
 
