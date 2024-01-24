@@ -12,26 +12,23 @@
     <div class="container">
       <div class="image-text">
         <div class="img">
-          <img [src]="project.images[0].src" alt="event">
+          <img [src]="project.images[0].src" [alt]="project.images[0].alt">
         </div>
         <div class="text">
-          <p>{{ project.text }}</p>
+          <div [innerHTML]="project.text"></div>
+          <p>Этап разработки: {{ project.development }}</p>
+          <p>Вместимость: {{ project.compatibility }} человек</p>
         </div>
       </div>
-
         <div class="content-img">
           <div class="temp-flex">
-            <div *ngFor="let image of project.images">
-              <div *ngIf="image.id !== 0">
-                <div class="image">
-                  <img [src]="image.src">
-                </div>
+            <div *ngFor="let image of project.images; index as i;">
+              <div class="image">
+                <img [src]="image.src" [alt]="image.alt">
               </div>
             </div>
           </div>
         </div>
-
-
     </div>
   </div>
 </div>

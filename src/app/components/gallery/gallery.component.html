@@ -16,25 +16,21 @@
       <div class="up-filter-title">
 <!--        <h1>Мәчетләр хәзинәсе</h1>-->
       </div>
-      <!--    сам фильтер-->
       <div class="filter">
-        <div class="filter-capacity-title">
-          <p>Сортировка</p>
-        </div>
         <div class="filter-capacity-input">
           <div class="p-title"><p>вместимость</p></div>
           <div class="input">
             <label class="capacity-label">
-              <input type="checkbox" id="up-to-50" [(ngModel)]="filter.upTo50"> до 50 человк
+              <input type="checkbox" id="up-to-50" [(ngModel)]="filter.upTo50" (change)="applyFilter()"> до 50 человк
             </label>
             <label>
-              <input type="checkbox" id="from-50-to-100" [(ngModel)]="filter.from50To100"> 50-100 человек
+              <input type="checkbox" id="from-50-to-100" [(ngModel)]="filter.from50To100" (change)="applyFilter()"> 50-100 человек
             </label>
             <label>
-              <input type="checkbox" id="from-100-to-300" [(ngModel)]="filter.from100To300"> 100-300 человек
+              <input type="checkbox" id="from-100-to-300" [(ngModel)]="filter.from100To300" (change)="applyFilter()"> 100-300 человек
             </label>
             <label>
-              <input type="checkbox" id="more-300" [(ngModel)]="filter.more300"> более 300 человек
+              <input type="checkbox" id="more-300" [(ngModel)]="filter.more300" (change)="applyFilter()"> более 300 человек
             </label>
           </div>
         </div>
@@ -42,14 +38,14 @@
           <div class="p-title"><p>статус</p></div>
           <div class="input">
             <label class="capacity-label">
-              <input type="checkbox" id="sketch" [(ngModel)]="filter.sketch"> эскиз
+              <input type="checkbox" id="sketch" [(ngModel)]="filter.sketch" (change)="applyFilter()"> эскиз
             </label>
             <label>
-              <input type="checkbox" id="built" [(ngModel)]="filter.built"> построенно
+              <input type="checkbox" id="built" [(ngModel)]="filter.built" (change)="applyFilter()"> построенно
             </label>
           </div>
         </div>
-        <button (click)="applyFilter()">Apply Filter</button>
+<!--        <button (click)="applyFilter()">Apply Filter</button>-->
       </div>
     </div>
     <!--    Галерея-->
