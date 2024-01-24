@@ -3,7 +3,7 @@
     <div class="container">
       <div class="container-padding">
         <div class="title">
-          <h1>События</h1>
+          <h2>События</h2>
         </div>
       </div>
     </div>
@@ -11,7 +11,7 @@
   <div class="event-content-block">
     <div class="container">
       <div class="events-content-grid">
-        <div *ngFor="let event of events">
+        <div *ngFor="let event of events" class="event-item">
           <a routerLink='/event/{{ event.id }}'>
             <div class="event-small">
               <img src="{{ event.image }}" alt="img">
