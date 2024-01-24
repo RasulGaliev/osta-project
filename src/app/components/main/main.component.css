@@ -40,18 +40,10 @@
 @media screen and (max-width: 1279px) {
   .main-block {
     height: 594px;
-    width: 100%;
   }
 
   .main-block .main-block-text-img {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 140px;
-  }
-
-  .main-block-text .title {
-    text-align: center;
   }
 
   .main-block-text .title img {
@@ -67,6 +59,26 @@
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .main-block {
+    height: 240px;
+  }
+
+  .main-block-text .title img {
+    width: 74px;
+  }
+
+  .main-block-img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-block-text .text p {
+    font-size: 10px;
+  }
+}
+
 
 
 

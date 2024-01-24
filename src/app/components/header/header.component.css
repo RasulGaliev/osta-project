@@ -28,6 +28,23 @@
   font-weight: 500;
 }
 
+.mobile-navbar {
+  display: none;
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
 @media screen and (max-width: 1279px) {
   .header {
     height: 94px;
@@ -38,7 +55,21 @@
     font-weight: 400;
   }
 
-  .navbar img {
+
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-menu img {
     width: 93px;
   }
+
+  .header {
+    height: 0;
+  }
+
+
 }

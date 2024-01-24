@@ -24,5 +24,44 @@
         </li>
       </ul>
     </nav>
+
+    <nav class="mobile-menu">
+      <div class="logo">
+        <a [href]="mainPageUrl">
+          <img [src]="logoUrl" alt="logo">
+        </a>
+      </div>
+      <div class="mobile-navbar">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="aboutPageUrl">о нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="galleryPageUrl">галерея мечетей</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="typesPageUrl">виды работ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="historyPageUrl">история</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']" fragment="target">контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="burger-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
   </div>
 </header>
+
+<script>
+  function toggleMenu() {
+    let mobileMenu = document.querySelector('.mobile-navbar');
+    mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
