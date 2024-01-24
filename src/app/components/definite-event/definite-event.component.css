@@ -4,7 +4,7 @@
   margin: 0 0 100px 0;
 }
 
-.event-title-block .title h1{
+.event-title-block .title h2 {
   font-size: 128px;
   color: white;
 }
@@ -22,6 +22,29 @@
   width: 700px;
 }
 
-.event-content-block .text p{
+.event-content-block .text p {
   font-size: 20px;
+}
+
+@media screen and (max-width: 1279px) {
+  .event-title-block{
+    height: 450px;
+    margin: 0 0 100px 0;
+  }
+
+  .event-title-block .title h2 {
+    font-size: 100px;
+  }
+
+  .event-title-block .container-padding{
+    padding: 110px 0;
+  }
+
+  .event-content-block .img img {
+    width: 500px;
+  }
+
+  .event-content-block .text p {
+    font-size: 15px;
+  }
 }
