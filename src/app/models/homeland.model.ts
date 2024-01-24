@@ -9,4 +9,5 @@ export interface HomelandModel {
   title: string;
   text: string;
   images: ImageModel[];
+  color: string;
 }

@@ -3,19 +3,19 @@
     <div class="container">
       <div class="container-padding">
         <div class="title">
-          <h1>Туган як</h1>
+          <h2>Туган як</h2>
         </div>
         <div class="description">
-          <h1>
+          <h2>
             История мечтей в Татарстане
-          </h1>
+          </h2>
         </div>
       </div>
     </div>
   </div>
   <div class="homeland-content">
-    <div class="container">
-      <div *ngFor="let content of homeland">
+    <div *ngFor="let content of homeland; index as i" [style.background-color]="this.cardColor[i % this.homeland.length] " >
+      <div class="container">
         <div class="content-img-slider">
           <div class="temp-flex">
             <div *ngFor="let image of content.images">
