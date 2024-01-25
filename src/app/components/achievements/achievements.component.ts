@@ -34,22 +34,9 @@ export class AchievementsComponent {
       },
       {
         breakpoint: '767px',
-        numVisible: 2,
+        numVisible: 1,
         numScroll: 1
       }
     ];
   }
-
-  getSeverity(status: string) {
-    switch (status) {
-      case 'INSTOCK':
-        return 'success';
-      case 'LOWSTOCK':
-        return 'warning';
-      case 'OUTOFSTOCK':
-        return 'danger';
-    }
-    return 0;
-  }
-
 }

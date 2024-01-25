@@ -27,3 +27,18 @@ footer {
     align-items: center;
   }
 }
+
+@media screen and (max-width: 767px) {
+  footer {
+    height: 300px;
+  }
+
+  .footer-block {
+    display: block;
+  }
+
+  .logo {
+    text-align: center;
+    margin-right: 0;
+  }
+}

@@ -1,3 +1,4 @@
+
 <header class="header">
   <div class="container header-container">
     <nav class="navbar">
@@ -49,6 +50,7 @@
             <a class="nav-link" [routerLink]="['/']" fragment="target">контакты</a>
           </li>
         </ul>
+        <img [src]="closeIconUrl" alt="close" onclick="closeMenu()">
       </div>
       <div class="burger-icon" onclick="toggleMenu()">
         <div class="bar"></div>
@@ -59,9 +61,3 @@
   </div>
 </header>
 
-<script>
-  function toggleMenu() {
-    let mobileMenu = document.querySelector('.mobile-navbar');
-    mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
-  }
-</script>

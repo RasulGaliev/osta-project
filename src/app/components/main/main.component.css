@@ -42,10 +42,6 @@
     height: 594px;
   }
 
-  .main-block .main-block-text-img {
-    padding-top: 140px;
-  }
-
   .main-block-text .title img {
     width: 216px;
   }
@@ -77,6 +73,10 @@
   .main-block-text .text p {
     font-size: 10px;
   }
+
+  .main-block .main-block-text-img {
+    padding-top: 80px;
+  }
 }
 
 
@@ -97,7 +97,7 @@
 
 .about-block .about-block-text .text {
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .about-block .about-block-img {
@@ -121,7 +121,7 @@
   font-weight: 400;
 }
 
-.about-block .grid-item .text {
+.about-block .grid-item .text p {
   font-size: 15px;
   font-weight: 300;
 }
@@ -149,7 +149,32 @@
   .about-block .grid-item {
     text-align: center;
   }
+
+  .about-block .about-grid {
+    margin-top: 0;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  .about-block {
+    padding: 30px 0;
+  }
+
+  .about-block .grid-item .title h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .about-block .grid-item .text p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .about-block .about-grid {
+    display: block;
+  }
+}
+
 
 
 
@@ -181,6 +206,7 @@
 .events-block .event-grid-item img {
   width: 300px;
   height: 200px;
+  object-fit: cover;
 }
 
 .events-block .all-event-link {
@@ -224,6 +250,39 @@
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .events-block {
+    height: 545px;
+    padding: 30px 0;
+  }
+
+  .events-block .events-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .events-block .event-grid-item {
+    width: 310px;
+    height: 216px;
+  }
+
+  .events-block .event-grid-item img {
+    width: 212px;
+    height: 140px;
+  }
+
+  .events-block .all-event-link a {
+    font-size: 15px;
+  }
+
+  .events-block .all-event-link {
+    margin-top: 120px;
+  }
+}
+
+
+
 
 
 .review-block {
@@ -279,6 +338,30 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  p-carousel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .review-block {
+    height: 420px;
+  }
+
+  .reviews-main {
+    display: none;
+  }
+
+  .reviews-mobile {
+    display: block;
+  }
+
+  .review {
+    width: 250px;
+    height: 320px;
+  }
+}
 
 
 
@@ -322,7 +405,6 @@
 }
 .contact-block .contact-information {
   margin-left: 20px;
-  /*padding: 25px 35px;*/
   width: 530px;
 }
 
@@ -400,15 +482,15 @@
   border: none;
   outline: none;
 }
-.main-map{
 
-  position:relative;
-  overflow:hidden
+.main-map {
+  position: relative;
+  overflow: hidden
 }
-.main-map .main-iframe-map{
+
+.main-map .main-iframe-map {
   width: 580px;
   height: 225px;
-
 }
 
 .contact-block button {
@@ -420,7 +502,7 @@
   font-size: 30px;
   margin-bottom: 15px;
 }
-.contact-block button:hover{
+.contact-block button:hover {
   background: #045F3E;
   color:white;
 }
@@ -430,7 +512,7 @@
   font-size: 13px;
   color: #7E868E;
 }
-.contact-block input{
+.contact-block input {
   padding: 0;
 }
 
@@ -443,7 +525,6 @@
 @media screen and (max-width: 1279px) {
   .contact-block {
     height: 1180px;
-    padding: 100px 0;
   }
 
   .contact-block .send-email {
@@ -472,111 +553,81 @@
   .contact-block .map {
     padding: 15px 0;
   }
+}
 
-  .contact-block .send-email .title {
-    font-size: 30px;
+@media screen and (max-width: 767px) {
+  .contact-block {
+    height: 1070px;
+    padding: 30px 0;
   }
 
-  .contact-block .send-email .text {
-    font-size: 15px;
+  .contact-block-title {
+    text-align: center;
   }
 
-  .contact-block .send-email p {
-    margin: 0;
+  .phones {
+    order: 3;
+    display: block !important;
+    margin-left: 80px;
   }
 
-  .contact-block .send-email .title,
-  .contact-block .send-email .text {
-    margin-bottom: 15px;
+  .email {
+    order: 1;
+    margin: 0 auto;
   }
 
-  .contact-block .contact-information {
-    margin-left: 20px;
-    /*padding: 25px 35px;*/
-    width: 530px;
+  .address {
+    order: 2;
+    margin: 0 auto;
   }
 
-  .contact-block .contact-information .phones,
-  .contact-block .contact-information .phone a,
-  .contact-block .contact-information .email a,
-  .contact-block .contact-information .address a,
-  .contact-block .social-networks {
-    display: flex;
-    margin-right: 12px;
-    align-items: center;
+  .social-networks {
+    order: 4;
   }
-
-  .contact-block .contact-information .phone img,
-  .contact-block .contact-information .email img,
-  .contact-block .contact-information .address img {
-    display: flex;
-    margin-right: 12px;
-  }
-
-  .contact-block .phone {
-    margin-right: 30px;
-  }
-  .contact-block a:hover{
-    color: #045F3E;
-  }
-
 
   .contact-block .social-networks .telegram {
-    margin-left: 50px;
+    margin-left: 0;
   }
 
-  .contact-block .contact-information p {
-    margin: 0;
+  .social-networks {
+    margin-left: 80px;
+  }
+
+  .contact-information .information {
+    display: grid;
+    text-align: center;
+  }
+
+  .contact-information .information{
+    padding: 0;
+  }
+
+  .contact-block .information {
+    margin-left: 0 !important;
+  }
+
+  .map {
+    width: 320px;
+    height: 250px;
+  }
+
+  .send-email {
+    padding: 10px 25px !important;
+  }
+
+  .contact-block .input-container {
+    height: 55px;
+  }
+
+  .contact-block button {
+    /*width: 205px;*/
+    height: 58px;
+    font-size: 20px;
   }
 
   .contact-block .contact-information .phone,
   .contact-block .contact-information .email,
   .contact-block .contact-information .address {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
-
-  .contact-information .information{
-    padding: 0 35px 25px 0;
-  }
-
-  .contact-block .input-container {
-    background-color: #F2F6FA;
-    margin: 20px 0;
-    height: 65px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-  }
-
-  .contact-block input {
-    color: #7E868E;
-    font-weight: 300;
-    font-size: 15px;
-  }
-
-
-  .contact-block img {
-    margin: 0 10px 0 20px;
-  }
-
-
-  .main-map .main-iframe-map{
-    width: 580px;
-    height: 225px;
-  }
-
-  .contact-block button {
-    width: 100%;
-    height: 80px;
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-
-  .contact-block .agree-label {
-    font-weight: 300;
-    font-size: 13px;
-  }
-
 }
-

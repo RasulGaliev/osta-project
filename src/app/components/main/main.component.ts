@@ -39,6 +39,7 @@ export class MainComponent {
   aboutIcon3Url: string = './assets/images/main-page/about-block/icons/about-icon3.png';
 
   reviewLogoUrl: string = './assets/images/main-page/review-block/logo/logo.svg';
+  responsiveOptions: any[] | undefined;
 
   contactPhoneIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/phone.svg';
   contactEmailIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/email.svg';
@@ -78,6 +79,19 @@ export class MainComponent {
       .subscribe(data => {
         this.events = data.data;
       })
+
+    this.responsiveOptions = [
+      {
+        breakpoint: '1279px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1
+      }
+    ];
   }
 
   subscribeToChanges() {

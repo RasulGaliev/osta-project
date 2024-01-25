@@ -11,3 +11,14 @@
   <app-root></app-root>
 </body>
 </html>
+<script>
+  function toggleMenu() {
+    let mobileMenu = document.querySelector('.mobile-navbar');
+    mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
+  }
+
+  function closeMenu() {
+    let mobileMenu = document.querySelector('.mobile-navbar');
+    mobileMenu.style.display = 'none';
+  }
+</script>

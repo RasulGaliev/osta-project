@@ -8,10 +8,11 @@ import { Component } from "@angular/core";
 export class HeaderComponent {
   logoUrl: string = './assets/images/logo/logo.svg';
 
+  closeIconUrl: string = './assets/images/icons/close/close.svg';
+
   mainPageUrl: string = '';
   aboutPageUrl: string = 'about';
   galleryPageUrl: string = 'gallery';
   typesPageUrl: string = 'project-types';
   historyPageUrl: string = 'history';
-  contactsPageUrl: string = '';
 }

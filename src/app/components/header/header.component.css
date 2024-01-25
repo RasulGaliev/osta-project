@@ -17,9 +17,12 @@
 
 .navbar ul {
   display: flex;
-  list-style-type: none; /* Убирает маркеры у всех элементов списка */
   justify-content: space-between;
   align-items: center;
+}
+
+ul {
+  list-style-type: none; /* Убирает маркеры у всех элементов списка */
 }
 
 .navbar a {
@@ -33,16 +36,37 @@
 }
 
 .mobile-menu {
-  display: flex;
   justify-content: space-between;
   width: 100%;
+  display: none;
 }
 
 .bar {
-  width: 25px;
-  height: 3px;
+  width: 15px;
+  height: 2px;
   background-color: #fff;
-  margin: 6px 0;
+  margin: 3px 0;
+}
+
+.mobile-navbar {
+  width: 320px;
+  height: 140px;
+  background: #011F14;
+  position: fixed;
+  padding-top: 90px;
+  display: flex;
+  justify-content: inherit;
+}
+
+.mobile-navbar img {
+  width: 15px;
+  height: 15px;
+  margin-top: 20px;
+}
+
+.mobile-navbar a {
+  color: #ffffff;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -54,8 +78,6 @@
     font-size: 20px;
     font-weight: 400;
   }
-
-
 }
 
 @media screen and (max-width: 767px) {
@@ -68,8 +90,15 @@
   }
 
   .header {
-    height: 0;
+    height: 42px;
   }
 
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
 
+  .logo {
+    margin-top: 5px;
+  }
 }

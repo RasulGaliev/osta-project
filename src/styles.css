@@ -167,7 +167,13 @@ h3 {
 
 .p-carousel-prev, .p-carousel-next {
   border: none ;
-  background-color: #F5F3EF;
+  background-color: rgb(0, 0, 0, 0%);
+  /*color: white;*/
+}
+
+.review-carousel .p-carousel-prev,
+.review-carousel .p-carousel-next {
+  color: white;
 }
 
 .pagination-container {

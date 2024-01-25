@@ -113,7 +113,7 @@
 
   <div class="review-block">
     <div class="container">
-      <div *ngIf="reviews.length > 0" class="reviews">
+      <div *ngIf="reviews.length > 0" class="reviews reviews-main">
         <div class="first-block review">
           <div class="text">
             {{ reviews[currentIndex].text }}
@@ -137,8 +137,27 @@
           </div>
         </div>
       </div>
+
+      <p-carousel [value]="reviews" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions" class="review-carousel">
+        <ng-template let-review pTemplate="item">
+          <div class="reviews reviews-mobile">
+            <div class="review">
+              <div class="text">
+                {{ review.text }}
+              </div>
+              <div class="title">
+                {{ review.author }}
+              </div>
+              <div>
+                <img [src]="reviewLogoUrl" alt="logo">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
     </div>
   </div>
+
 
   <div class="contact-block" id="target">
     <div class="container">
