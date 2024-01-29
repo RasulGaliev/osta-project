@@ -35,6 +35,11 @@ ul {
   display: none;
 }
 
+.mobile-navbar ul {
+  width: 180px;
+  padding-left: 15px;
+}
+
 .mobile-menu {
   justify-content: space-between;
   width: 100%;
@@ -49,25 +54,29 @@ ul {
 }
 
 .mobile-navbar {
-  width: 320px;
+  width: 200px;
   height: 140px;
   background: #011F14;
   position: fixed;
   padding-top: 90px;
+  margin-left: 120px;
   display: flex;
   justify-content: inherit;
 }
 
 .mobile-navbar img {
   width: 15px;
-  height: 15px;
+  height: 20px;
   margin-top: 20px;
 }
 
 .mobile-navbar a {
   color: #ffffff;
   font-size: 12px;
+  line-height: 23px;
 }
+
+
 
 @media screen and (max-width: 1279px) {
   .header {

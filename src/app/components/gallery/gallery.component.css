@@ -91,7 +91,6 @@
   margin-top: 100px;
 }
 
-
 label {
   font-size: 15px;
   margin: 0 1em;
@@ -107,9 +106,6 @@ label {
 
   .gallery-filter-block .filter {
     margin: 0;
-  }
-
-  .gallery-filter-block .filter {
     display: block;
     text-align: center;
   }
@@ -134,4 +130,41 @@ label {
 
 }
 
+@media screen and (max-width: 1279px) {
+  .gallery-title-block {
+    background: url("../../../assets/images/gallery-page/background/gallery-background-mobile.svg") no-repeat center;
+    background-size: cover;
+    height: 307px;
+  }
 
+  .content-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+
+  .input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-filter-block .filter .input {
+    text-align: start;
+  }
+
+  .gallery-filter-block .filter p {
+    font-size: 15px;
+  }
+
+  .gallery-filter-block .filter label {
+    font-size: 12px;
+  }
+
+  .gallery-content-block .image-content img:not(.for-css) {
+    height: 232px;
+    width: 310px;
+  }
+
+  .gallery-filter-block .up-filter-title {
+    margin-top: 40px;
+  }
+}

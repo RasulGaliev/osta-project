@@ -34,28 +34,43 @@
   flex-wrap: wrap;
   width: 775px;
   justify-content: center;
-  gap: 0 100px;
+  /*gap: 0 100px;*/
 }
 
 .about-block .grid-item {
   /*display: flex;*/
   text-align: center;
-
+  width: 360px;
 }
+
 
 .grid-item:nth-child(3) {
   flex-basis: 100%;
+  text-align: center;
 }
+
+
 
 .about-block .grid-item .title h3 {
   font-size: 20px;
   font-weight: 400;
 }
 
+.about-block .grid-item .text {
+  padding: 0 44px;
+}
+
 .about-block .grid-item .text p {
   font-size: 15px;
   font-weight: 300;
   line-height: 22px;
+}
+
+@media screen and (min-width: 1280px) {
+  .grid-item:nth-child(3) .text {
+    width: 360px;
+    margin-left: calc((775px - 360px)/2);
+  }
 }
 
 @media screen and (max-width: 1279px) {
@@ -73,17 +88,14 @@
   }
 
   .about-block .about-grid {
-    display: flex;
     text-align: start;
     width: 680px;
     margin-top: 10px;
-    gap: 30px 60px;
+    gap: 30px 0;
   }
 
   .about-block .grid-item {
-    /*display: flex;*/
-    text-align: center;
-
+    width: 290px;
   }
 
   .grid-item:nth-child(1) {
@@ -100,11 +112,57 @@
   }
 
   .about-block .grid-item .text {
+    padding: 0 5px;
+  }
+
+  .about-block .grid-item .text p {
     line-height: 22px;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .about-block {
+    padding-top: 50px;
+    height: 550px;
+  }
+
+  .about-block .about-block-text .text {
+    display: none;
+  }
+
+  .about-block .about-grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 310px;
+  }
+
+  .about-block .grid-item {
+    text-align: start;
+    width: 270px;
+  }
+
+  .about-block .grid-item:nth-child(3) {
+    width: 300px;
+  }
+
+  .about-block .grid-item:nth-child(1) {
+    margin: 0;
+  }
+
+  .about-block .grid-item .title h3 {
+    font-size: 15px;
+  }
+
+  .about-block .grid-item .text p {
+    line-height: 18px;
+    font-size: 12px;
+  }
+}
+
+
 
 
 
@@ -138,6 +196,16 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .information-block {
+    height: 859px;
+  }
+
+  .information-block .text p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
 
 
 
@@ -208,7 +276,41 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .step-block {
+    padding: 30px 0;
+  }
 
+  .step-block .step {
+    margin: 0;
+    flex: none;
+    width: 100%
+  }
+
+  .step-block .title h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 5px 0;
+  }
+
+  .step-block .text p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .step-block .step img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .step-block .steps {
+    margin-top: 20px;
+  }
+
+  .step-block {
+    height: 790px;
+  }
+}
 
 
 
@@ -224,4 +326,3 @@
 .team-block h2 {
   color: white;
 }
-
