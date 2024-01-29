@@ -1,5 +1,6 @@
 .event-title-block{
-  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat;
+  background: url('../../../assets/images/history-page/background/history-background.png') no-repeat center;
+  background-size: cover;
   height: 610px;
   margin: 0 0 100px 0;
 }
@@ -46,5 +47,32 @@
 
   .event-content-block .text p {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .event-title-block{
+    height: 204px;
+    margin: 0 0 30px 0;
+  }
+
+  .event-title-block .title h2 {
+    font-size: 36px;
+  }
+
+  .event-title-block .container-padding {
+    padding: 50px 0;
+  }
+
+  .event-content-block img {
+    max-width: 310px;
+  }
+
+  .event-content-block h2 {
+    font-size: 15px;
+  }
+
+  .event-content-block .text p {
+    font-size: 12px;
   }
 }

@@ -93,5 +93,45 @@
   .pagination-container {
     margin-top: 50px;
   }
+}
 
+@media screen and (max-width: 1279px) {
+  .homeland-block {
+    height: 258px;
+  }
+
+  .homeland-block .title h2 {
+    font-size: 36px;
+  }
+
+  .homeland-block .container-padding {
+    padding: 30px 0;
+  }
+
+  .homeland-block .description {
+    padding: 0 55px;
+  }
+
+  .homeland-block .description h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .homeland-content img {
+    width: 150px;
+  }
+
+  .homeland-content .content-description p {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  .homeland-content .content-description h2 {
+    font-size: 15px;
+  }
+
+  .homeland-content .content-img-slider .temp-flex {
+    grid-row-gap: 0;
+    padding: 20px 0 0 0;
+  }
 }

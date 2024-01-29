@@ -62,7 +62,6 @@
 
   .history-block .container-padding .a-btn{
     border-radius: 40px;
-    border: solid 3px #D8CE7F;
     width: 530px;
   }
 
@@ -72,5 +71,37 @@
 
   .history-block .container-padding .a-btn h3 {
     font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .history-block {
+    height: 258px;
+  }
+
+  .history-block .container-padding {
+    padding-top: 25px;
+  }
+
+  .history-block .container-padding .a-btn{
+    height: 90px;
+    width: 290px;
+  }
+
+  .history-block .title h2 {
+    font-size: 36px;
+  }
+
+  .history-block .container-padding .a-btn h3 {
+    font-size: 22px;
+  }
+
+  .history-block .container-padding .a-btn p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .history-info img {
+    max-width: 310px;
   }
 }

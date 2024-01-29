@@ -91,10 +91,54 @@
   .image img {
     width: 350px;
     height: 263px;
-    object-fit: cover;
   }
 
   .content-img .temp-flex {
     padding: 50px 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .definite-gallery-block {
+    height: 325px;
+  }
+
+  .definite-gallery-block .title {
+    padding-top: 250px;
+  }
+
+  .image-text {
+    display: block;
+  }
+
+  .definite-gallery-content-block .text p {
+    font-size: 12px;
+  }
+
+  .image-text {
+    padding-top: 30px;
+  }
+
+  .img img {
+    width: 310px;
+    height: 264px;
+  }
+
+  .text {
+    width: 290px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .image img {
+    width: 310px;
+    height: 263px;
+  }
+
+  .content-img .temp-flex {
+    padding: 10px 0 0 0;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

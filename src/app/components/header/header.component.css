@@ -60,7 +60,7 @@ ul {
   position: fixed;
   padding-top: 90px;
   margin-left: 120px;
-  display: flex;
+  display: none;
   justify-content: inherit;
 }
 
