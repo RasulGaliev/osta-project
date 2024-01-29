@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProjectTypesComponent {
   buildIconUrl: string = './assets/images/project-types-page/project-types-block/icon/build.svg';
+  mallIconUrl: string = './assets/images/project-types-page/project-types-block/icon/mall.svg';
+  mosqueIconUrl: string = './assets/images/project-types-page/project-types-block/icon/mosque.svg';
+  factoryIconUrl: string = './assets/images/project-types-page/project-types-block/icon/factory.svg';
 
   houseMainImgUrl: string = './assets/images/project-types-page/house-block/house-main.png';
   houseGridImgUrl: string = './assets/images/project-types-page/house-block/house-grid.png';

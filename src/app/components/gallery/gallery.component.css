@@ -130,7 +130,7 @@ label {
 
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 767px) {
   .gallery-title-block {
     background: url("../../../assets/images/gallery-page/background/gallery-background-mobile.svg") no-repeat center;
     background-size: cover;
