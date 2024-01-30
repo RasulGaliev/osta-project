@@ -8,9 +8,12 @@ footer {
 .footer-block {
   display: flex;
   align-items: end;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.footer-block p {
+.footer-block p,
+.footer-block a {
   color: white;
   font-size: 15px;
   font-weight: 300;

@@ -29,7 +29,7 @@ export class MainComponent {
   currentSliderIndex: number = 0;
   showImage: boolean = true;
   intervalId: any;
-  readonly sliderTime:number = 10000;
+  readonly sliderTime:number = 1000;
 
   titleImgUrl: string = './assets/images/main-page/main-block/main-title/main-title.svg';
 
