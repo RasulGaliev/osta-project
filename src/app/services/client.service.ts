@@ -9,7 +9,7 @@ import {ProjectsModel} from "../models/projects.model";
   providedIn: 'root',
 })
 export class ClientService {
-  private apiUrl = 'http://osta.dimche.tatar/api/v1/';
+  private apiUrl = 'https://api.osta-project.ru/api/v1/';
   constructor(private http: HttpClient) {}
   getAllReviews(): Observable<any>{
     return this.http.get(this.apiUrl + "reviews");

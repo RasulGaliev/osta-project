@@ -35,19 +35,19 @@
       <div class="mobile-navbar">
         <ul>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="galleryPageUrl">галерея мечетей</a>
+            <a class="nav-link" [routerLink]="galleryPageUrl" onclick="closeMenu()">галерея мечетей</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="aboutPageUrl">о нас</a>
+            <a class="nav-link" [routerLink]="aboutPageUrl" onclick="closeMenu()">о нас</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="typesPageUrl">виды работ</a>
+            <a class="nav-link" [routerLink]="typesPageUrl" onclick="closeMenu()">виды работ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="historyPageUrl">история</a>
+            <a class="nav-link" [routerLink]="historyPageUrl" onclick="closeMenu()">история</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']" fragment="target">контакты</a>
+            <a class="nav-link" [routerLink]="['/']" fragment="target" onclick="closeMenu()">контакты</a>
           </li>
         </ul>
         <img [src]="closeIconUrl" alt="close" onclick="closeMenu()">

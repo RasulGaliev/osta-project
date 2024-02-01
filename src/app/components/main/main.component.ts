@@ -33,7 +33,7 @@ export class MainComponent {
 
   titleImgUrl: string = './assets/images/main-page/main-block/main-title/main-title.svg';
 
-  aboutImgUrl: string = './assets/images/main-page/about-block/about-img/about-img.png';
+  aboutImgUrl: string = './assets/images/main-page/about-block/about-img/about.jpg';
   aboutIcon1Url: string = './assets/images/main-page/about-block/icons/about-icon1.png';
   aboutIcon2Url: string = './assets/images/main-page/about-block/icons/about-icon2.png';
   aboutIcon3Url: string = './assets/images/main-page/about-block/icons/about-icon3.png';
@@ -47,7 +47,7 @@ export class MainComponent {
   contactTelegramIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/telegram.svg';
   contactWhatsAppIconUrl: string = './assets/images/main-page/contacts-block/contact-icons/whatsapp.svg';
 
-  formNameIconUrl: string = './assets/images/main-page/contacts-block/form-icons/name.png';
+  formNameIconUrl: string = 'https://osta-project.ru/assets/images/main-page/contacts-block/form-icons/name.png';
   formPhoneIconUrl: string = './assets/images/main-page/contacts-block/form-icons/phone.png';
   formEmailIconUrl: string = './assets/images/main-page/contacts-block/form-icons/email.png';
 

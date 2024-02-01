@@ -65,8 +65,8 @@
   }
 
   .main-block-img img {
-    max-width: 100px;
-    height: 100px;
+    max-width: 130px;
+    height: 130px;
   }
 
   .main-block-text .text p {
@@ -74,7 +74,7 @@
   }
 
   .main-block .main-block-text-img {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 }
 
@@ -102,6 +102,11 @@
 .about-block .about-block-img {
   width: 580px;
   margin-left: 20px;
+}
+
+.about-block .about-block-img img {
+  width: 580px;
+  height: 560px;
 }
 
 .about-block .about-grid {
@@ -357,8 +362,9 @@
   }
 
   .review {
-    width: 250px;
+    width: 230px;
     height: 320px;
+    padding: 20px 10px;
   }
 }
 
