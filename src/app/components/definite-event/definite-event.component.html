@@ -13,8 +13,7 @@
       <div class="title">
         <h2>{{ event.title }}</h2>
       </div>
-      <div class="text">
-        <p>{{ event.text }}</p>
+      <div class="text" [innerHTML]="event.text">
       </div>
       <div class="img">
         <img src="{{ event.image }}" alt="event">

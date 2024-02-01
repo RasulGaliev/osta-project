@@ -72,12 +72,10 @@ export class MainComponent {
         this.reviews = data.data;
       });
 
-    const params = new HttpParams()
-      .set('page', 1)
-      .set('limit', 3);
-    this.clientService.getAllEventsPage(params)
+    this.clientService.getAllEvents()
       .subscribe(data => {
         this.events = data.data;
+        console.log(this.events.length)
       })
 
     this.responsiveOptions = [
@@ -119,7 +117,7 @@ export class MainComponent {
     setTimeout(() => {
       this.currentSliderIndex = (this.currentSliderIndex + 1) % this.sliderImagesUrl.length;
       this.showImage = true;
-    }, 500);
+    }, 700);
   }
 
   // Метод для прокрутки к секции с идентификатором "target"

@@ -72,17 +72,17 @@
   <div class="events-block">
     <div class="container">
       <div class="events-grid">
-        <a routerLink='/event/{{ events.length }}'>
-          <div class="event-grid-item" *ngIf="events.length > 0">
+        <a routerLink='/event/{{ events[events.length - 3].id }}'>
+          <div class="event-grid-item" *ngIf="events.length > 2">
             <div class="img">
-              <img src="{{ events[events.length - 1].image }}" alt="event">
+              <img [src]="events[events.length - 3].image" alt="event">
             </div>
             <div class="text">
-              <p>{{ events[events.length - 1].title }}</p>
+              <p>{{ events[events.length - 3].title}}</p>
             </div>
           </div>
         </a>
-        <a routerLink='/event/{{ events.length - 1 }}'>
+        <a routerLink='/event/{{ events[events.length - 2].id}}'>
           <div class="event-grid-item" *ngIf="events.length > 1">
             <div class="img">
               <img src="{{ events[events.length - 2].image }}" alt="event">
@@ -92,13 +92,13 @@
             </div>
           </div>
         </a>
-        <a class="last-event" routerLink='/event/{{ events.length - 2 }}'>
-          <div class="event-grid-item" *ngIf="events.length > 2">
+        <a class="last-event" routerLink='/event/{{ events[events.length - 1].id }}'>
+          <div class="event-grid-item" *ngIf="events.length > 0">
             <div class="img">
-              <img src="{{ events[events.length - 3].image }}" alt="event">
+              <img src="{{ events[events.length - 1].image }}" alt="event">
             </div>
             <div class="text">
-              <p>{{ events[events.length - 3].title }}</p>
+              <p>{{ events[events.length - 1].title }}</p>
             </div>
           </div>
         </a>

@@ -21,6 +21,8 @@
 
 .homeland-content img {
   width: 580px;
+  max-height: 580px;
+  object-fit: cover;
 }
 
 .homeland-content .content-img-slider .temp-flex {
