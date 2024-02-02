@@ -204,7 +204,7 @@
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  height: 344px;
+  /*height: 344px;*/
 }
 
 .events-block .event-grid-item img {
@@ -224,6 +224,11 @@
   font-size: 30px;
 }
 
+.events-block p {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 1279px) {
   .events-block {
     height: 450px;
@@ -234,9 +239,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .events-block .event-grid-item {
-    height: 292px;
-  }
+  /*.events-block .event-grid-item {*/
+  /*  height: 292px;*/
+  /*}*/
   .events-grid .last-event {
     display: none;
   }
@@ -268,7 +273,7 @@
 
   .events-block .event-grid-item {
     width: 310px;
-    height: 216px;
+    /*height: 216px;*/
   }
 
   .events-block .event-grid-item img {
@@ -372,8 +377,11 @@
 
 
 .contact-block {
-  height: 834px;
   padding: 100px 0;
+}
+
+.contact-block button {
+  color: black;
 }
 
 .contact-block .contacts {
@@ -387,11 +395,11 @@
   border-radius: 5px;
 }
 
-.contact-block .send-email .title {
+.contact-block .send-email .title p {
   font-size: 30px;
 }
 
-.contact-block .send-email .text {
+.contact-block .send-email .text p {
   font-size: 15px;
 }
 
@@ -404,8 +412,8 @@
   margin-bottom: 15px;
 }
 
-.contact-block .send-email .title,
-.contact-block .send-email .text {
+.contact-block .send-email .title p,
+.contact-block .send-email .text p {
   color: #2E363E
 }
 .contact-block .contact-information {
@@ -450,7 +458,7 @@
   margin-bottom: 25px;
 }
 
-.contact-information .information{
+.contact-information .information {
   padding: 0 35px 25px 0;
 }
 
@@ -555,6 +563,10 @@
 
   .contact-block .map {
     padding: 15px 0;
+  }
+
+  .contact-block .send-email .title p {
+    font-size: 20px;
   }
 }
 

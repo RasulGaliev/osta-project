@@ -14,13 +14,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AchievementsComponent } from './components/achievements/achievements.component';
 import { CarouselModule } from 'primeng/carousel';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HomelandComponent } from './components/homeland/homeland.component';
 import {LocalizationInterceptor} from "./services/localization-interceptor.service";
 import { EventComponent } from './components/event/event.component';
 import { DefiniteEventComponent } from './components/definite-event/definite-event.component';
 import { DefiniteGalleryComponent } from './components/definite-gallery/definite-gallery.component';
-import {ToastModule} from "primeng/toast";
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -47,7 +47,11 @@ import {ToastModule} from "primeng/toast";
     CarouselModule,
     HttpClientModule,
     FormsModule,
-    ToastModule
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-left', // Установите желаемое положение уведомлений
+    }),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

@@ -13,12 +13,12 @@ export class GalleryComponent {
   constructor(private clientService: ClientService) {}
   projects: ProjectsModel[] = [];
   filter = {
-    upTo50: true,
-    from50To100: true,
-    from100To300: true,
-    more300: true,
-    sketch: true,
-    built: true
+    upTo50: false,
+    from50To100: false,
+    from100To300: false,
+    more300: false,
+    sketch: false,
+    built: false
   };
   minCompatibility: number = -1;
   maxCompatibility: number = 1000000;

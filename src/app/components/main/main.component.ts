@@ -5,6 +5,9 @@ import {EventsModel} from "../../models/events.model";
 import { FormService } from '../../services/form.service';
 import {ClientService} from "../../services/client.service";
 import {HttpParams} from "@angular/common/http";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {ToastrService} from "ngx-toastr";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -51,6 +54,8 @@ export class MainComponent {
   formPhoneIconUrl: string = './assets/images/main-page/contacts-block/form-icons/phone.png';
   formEmailIconUrl: string = './assets/images/main-page/contacts-block/form-icons/email.png';
 
+  // @ts-ignore
+  form: FormGroup;
   name: string = '';
   phone: string = '';
   email: string = '';
@@ -59,8 +64,18 @@ export class MainComponent {
   constructor(
     private route: ActivatedRoute,
     private formService: FormService,
-    private clientService: ClientService
-  ) {}
+    private clientService: ClientService,
+    private formBuilder: FormBuilder,
+    private toaster: ToastrService,
+    private router: Router
+  ) {
+    this.form = this.formBuilder.group({
+      name: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.pattern(/^\+7 \d{3} \d{3}-\d{2}-\d{2}$/)]],
+      email: ['', [Validators.required, Validators.email]],
+      data_transfer_condition: ['', [Validators.required, Validators.requiredTrue]]
+    })
+  }
   ngOnInit() {
     this.switchImg();
 
@@ -126,6 +141,7 @@ export class MainComponent {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
+    // this.router.navigate(['/'], { fragment: 'target' });
   }
 
   updateReviews(): void {
@@ -139,19 +155,22 @@ export class MainComponent {
     }
   }
 
-  onSubmit(formData: any): void {
-    // Вызывается при отправке формы
-    this.formService.submitForm(formData).subscribe(
-      (response) => {
-        console.log('Успешно отправлено:', response);
-        // Дополнительные действия при успешной отправке
-      },
-      (error) => {
-        console.error('Ошибка отправки:', error);
-        // Дополнительные действия при ошибке
-      }
-    );
+  onSubmit(): void {
+    if (this.form.valid) {
+      // Вызывается при отправке формы
+      this.formService.submitForm(this.form.value).subscribe(
+        (response) => {
+          this.toaster.success('Успешно отправлено', 'Успех');
+          // Дополнительные действия при успешной отправке
+        },
+        (error) => {
+          this.toaster.error('Ошибка отправки', 'Ошибка');
+          console.error('Ошибка отправки:', error);
+          // Дополнительные действия при ошибке
+        }
+      );
+    } else {
+      this.toaster.error('Пожалуйста, заполните форму корректно', 'Ошибка')
+    }
   }
-
-
 }

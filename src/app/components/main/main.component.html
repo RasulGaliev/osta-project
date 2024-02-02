@@ -19,7 +19,6 @@
       </div>
     </div>
   </div>
-
   <div class="about-block">
     <div class="container">
       <div class="about-block-text-img">
@@ -68,7 +67,6 @@
       </div>
     </div>
   </div>
-
   <div class="events-block">
     <div class="container">
       <div class="events-grid">
@@ -156,10 +154,11 @@
         </ng-template>
       </p-carousel>
     </div>
+    <div id="target"></div>
   </div>
 
 
-  <div class="contact-block" id="target">
+  <div class="contact-block">
     <div class="container">
       <div class="contact-block-title">
         <h2>Контакты</h2>
@@ -172,29 +171,31 @@
           <div class="text">
             <p>и мы обязательно свяжемся с вами</p>
           </div>
-          <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <label for="name">
               <div class="input-container">
                 <img [src]="formNameIconUrl" alt="name">
-                <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Имя" required>
+                <input type="text" id="name" name="name" formControlName="name" placeholder="Имя" required>
               </div>
             </label>
             <label for="phone">
               <div class="input-container">
                 <img [src]="formPhoneIconUrl" alt="phone">
-                <input type="tel" id="phone" name="phone" [(ngModel)]="phone" placeholder="+7 999 999-99-99" required>
-<!--                Номер телефона-->
+                <input type="tel" id="phone" name="phone" formControlName="phone" placeholder="+7 999 999-99-99" required>
+                <div *ngIf="form.get('phone') && form.get('phone')!.hasError('patter')">
+                  Неверный формат номера телефона
+                </div>
               </div>
             </label>
             <label for="email">
               <div class="input-container">
                 <img [src]="formEmailIconUrl" alt="email">
-                <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="E-mail" required>
+                <input type="email" id="email" name="email" formControlName="email" placeholder="E-mail" required>
               </div>
             </label>
             <button type="submit">Отправить</button>
             <label for="agree" class="agree-label">
-              <input type="checkbox" id="agree" name="data_transfer_condition" [(ngModel)]="data_transfer_condition" required>
+              <input type="checkbox" id="agree" name="data_transfer_condition" formControlName="data_transfer_condition" required>
               Соглашаюсь с условиями передачи данных
             </label>
           </form>

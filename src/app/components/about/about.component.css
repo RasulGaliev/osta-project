@@ -228,7 +228,7 @@
   display: flex;
   flex-wrap: wrap; /* Разрешаем перенос на новую строку */
   gap: 60px;
-  justify-content: flex-start; /* Вернем равномерное распределение по горизонтали */
+  justify-content: space-between; /* Вернем равномерное распределение по горизонтали */
 }
 
 .step-block .step {
@@ -253,6 +253,10 @@
 
   .step:nth-child(4) {
     margin-left: calc(100% / 6);
+  }
+
+  .step:nth-child(5) {
+    margin-right: calc(100% / 6);
   }
 }
 
