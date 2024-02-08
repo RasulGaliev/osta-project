@@ -123,6 +123,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .about-block .about-block-text {
+    width: 300px;
+  }
+
   .about-block {
     padding-top: 50px;
     height: 550px;

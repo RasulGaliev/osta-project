@@ -283,7 +283,9 @@
 
 
 
-
+.factory-block {
+  display: none;
+}
 
 .factory-block .container {
   padding: 100px 0;
@@ -371,9 +373,11 @@
 
 
 .interior-block {
-  background-color: #001A25;
+  /*background-color: #001A25;*/
+  background-color: #fff;
   height: 950px;
-  color: white;
+  /*color: white;*/
+  color: black;
 }
 
 .interior-block .container {
